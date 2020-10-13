@@ -1,0 +1,30 @@
+package com.apartment.models;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+import org.springframework.data.annotation.Id;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
+@Entity
+public class Positions {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int positionId;
+	private String positionName;
+	
+	@OneToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "ownerId", nullable = false)
+    private Owner owner;
+}

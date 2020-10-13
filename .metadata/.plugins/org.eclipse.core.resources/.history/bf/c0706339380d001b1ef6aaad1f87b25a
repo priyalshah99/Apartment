@@ -1,0 +1,18 @@
+package com.apartment.request;
+
+import java.security.Timestamp;
+import java.util.Date;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class MeetingRequest {
+	private String meetingDate;
+	private String startTime;
+	private String endTime;
+	private String topic;
+	private String agenda;
+	private String minutesOfMeeting;
+}

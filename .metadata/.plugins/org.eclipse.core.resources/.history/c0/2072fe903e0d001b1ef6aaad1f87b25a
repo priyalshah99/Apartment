@@ -1,0 +1,5 @@
+package com.apartment.repo;
+
+public interface MeetingRepo extends JpaRepository<Long> {
+
+}

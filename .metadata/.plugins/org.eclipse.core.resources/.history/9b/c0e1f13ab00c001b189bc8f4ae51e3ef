@@ -1,0 +1,26 @@
+package com.apartment.models;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+import org.springframework.data.annotation.Id;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
+@Entity
+public class Salary {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int salaryId;
+	private Date datePaid;
+	private double amountPaid;
+	private int noOfLeaves;
+
+}

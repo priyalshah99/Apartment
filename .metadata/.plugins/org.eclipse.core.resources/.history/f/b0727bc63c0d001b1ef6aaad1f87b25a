@@ -1,0 +1,10 @@
+package com.apartment.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.apartment.service.MeetingService;
+
+@Service
+public class MeetingServiceImpl implements MeetingService {
+
+}

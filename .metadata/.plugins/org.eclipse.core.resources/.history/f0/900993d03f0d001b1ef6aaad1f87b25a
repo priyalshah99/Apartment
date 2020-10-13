@@ -1,0 +1,17 @@
+package com.apartment.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.apartment.request.MeetingRequest;
+import com.apartment.service.MeetingService;
+
+@Service
+public class MeetingServiceImpl implements MeetingService {
+
+	@Override
+	public void addMeeting(MeetingRequest meetingRequest) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
