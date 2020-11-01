@@ -18,7 +18,7 @@ public class OwnerController {
 	
 	@PostMapping("/")
 	public String addOwner(@RequestBody final OwnerRequest ownerRequest) {
-		return null;
-		
+		ownerService.saveOwner(ownerRequest);
+		return "Owner added successfully";
 	}
 }

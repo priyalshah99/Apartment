@@ -26,7 +26,7 @@ public class Complaints {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int complaintId;	
+	private long complaintId;	
 	private Date date;	
 	private String description;	
 	private int upVote;	

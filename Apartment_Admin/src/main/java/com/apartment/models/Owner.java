@@ -23,7 +23,7 @@ public class Owner {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int ownerId;
+	private long ownerId;
 	private String name;
 	private String contactNo;
 	private String email;

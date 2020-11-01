@@ -1,5 +1,9 @@
 package com.apartment.request;
 
-public class EmployeeDetailsRequest {
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
+public class EmployeeDetailsRequest {
 }

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;complaints&apos; in &apos;com.apartment.service.impl.ComplaintsServiceImpl.saveComplaint(...)&apos; to &apos;complaint&apos;&#x0D;&#x0A;- Original project: &apos;Apartment_Admin&apos;&#x0D;&#x0A;- Original element: &apos;com.apartment.service.impl.ComplaintsServiceImpl.saveComplaint(ComplaintsRequest).complaints&apos;&#x0D;&#x0A;- Renamed element: &apos;complaints&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;complaints&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.apartment.service.impl{ComplaintsServiceImpl.java[ComplaintsServiceImpl~saveComplaint~QComplaintsRequest;@complaints!662!702!673!682!QComplaints;!0!false" name="complaint" references="true" stamp="1604245511890" version="1.0"/>
+</session>

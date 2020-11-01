@@ -7,6 +7,6 @@ import com.apartment.models.Election;
 import com.apartment.models.Owner;
 
 @Repository
-public interface OwnerRepo extends JpaRepository <Owner,Integer> {
+public interface OwnerRepo extends JpaRepository <Owner,Long> {
 
 }
