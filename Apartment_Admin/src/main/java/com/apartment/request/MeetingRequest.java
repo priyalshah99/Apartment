@@ -17,7 +17,7 @@ public class MeetingRequest {
 	"startTime" : "13/10/2020 03:00:00",
 	"endTime" : "13/10/2020 04:00:00",
 	"topic" : "Annual Meeting 2020",
-	"Agenda" : "Society renovation, Parking issues",
+	"agenda" : "Society renovation, Parking issues",
 	"minutesOfMeeting" : "none"
 }
 */

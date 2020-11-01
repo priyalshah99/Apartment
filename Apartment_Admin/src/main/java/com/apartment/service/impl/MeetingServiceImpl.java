@@ -1,8 +1,9 @@
-package com.apartment.service.impl;
+ package com.apartment.service.impl;
 
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,4 +33,18 @@ public class MeetingServiceImpl implements MeetingService {
 		meetingRepo.save(meeting);
 	}
 
+	@Override
+	public List<Meetings> fetchMeetings(final String state) {
+		if(state.equalsIgnoreCase(Constants.UPCOMING)) {
+			return meetingRepo.findByStartTimeAfter(Timestamp.valueOf(LocalDateTime.now()));
+		} else if(state.equalsIgnoreCase(Constants.COMPLETED)) {
+			return meetingRepo.findByEndTimeBefore(Timestamp.valueOf(LocalDateTime.now()));
+		}
+		return meetingRepo.findAll();
+	}
+
+	@Override
+	public Meetings fetchMeeting(Long id) {
+		return meetingRepo.getOne(id);
+	}
 }

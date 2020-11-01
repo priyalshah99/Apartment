@@ -1,7 +1,0 @@
-package com.apartment.repo;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface MeetingRepo extends JpaRepository<Long> {
-
-}

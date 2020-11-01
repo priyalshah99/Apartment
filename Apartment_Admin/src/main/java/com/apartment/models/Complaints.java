@@ -26,17 +26,12 @@ public class Complaints {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int complaintId;
-	
-	private Date date;
-	
-	private String description;
-	
-	private int upVote;
-	
-	private int downVote;
-	
-	private String status;
+	private int complaintId;	
+	private Date date;	
+	private String description;	
+	private int upVote;	
+	private int downVote;	
+	private int status;
 	
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "ownerId", nullable = false)
