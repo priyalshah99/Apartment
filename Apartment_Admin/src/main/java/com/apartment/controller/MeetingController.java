@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.apartment.models.Meetings;
 import com.apartment.request.MeetingRequest;
+import com.apartment.response.MeetingResponse;
 import com.apartment.service.MeetingService;
 
 @RestController
@@ -38,8 +39,8 @@ public class MeetingController {
 	}
 	
 	@GetMapping("/fetch/{id}")
-	public Meetings getMeeting(@PathVariable final Long id) {
-		return meetingService.fetchMeeting(id);
+	public MeetingResponse getMeeting(@PathVariable final Long id) {
+		return MeetingResponse.build(meetingService.fetchMeeting(id));
 	}
 	
 	

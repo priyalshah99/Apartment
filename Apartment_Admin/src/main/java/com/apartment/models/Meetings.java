@@ -1,6 +1,7 @@
 package com.apartment.models;
 
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 import javax.persistence.Entity;
@@ -16,6 +17,7 @@ import lombok.Setter;
 @Entity
 public class Meetings {
 
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long meetingId;
