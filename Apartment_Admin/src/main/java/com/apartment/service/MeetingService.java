@@ -9,6 +9,10 @@ public interface MeetingService {
 
 	void addMeeting(final MeetingRequest meetingRequest);
 	
+	void updateMeeting(final Long id, final MeetingRequest meetingRequest);
+	
+	void deleteMeeting(final Long id);
+	
 	List<Meetings> fetchMeetings(final String state);
 	
 	Meetings fetchMeeting(final Long id);

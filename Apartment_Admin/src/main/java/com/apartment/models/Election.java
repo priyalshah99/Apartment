@@ -22,10 +22,10 @@ public class Election {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int electionId;
+	private Long electionId;
 	private int voteCount;
 	private Date date;
-	private boolean result;
+	private boolean winner;
 	
 	@ManyToMany(mappedBy = "elections")
 	Set<Positions> positions;

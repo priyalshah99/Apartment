@@ -9,5 +9,7 @@ public interface EmployeePositionService {
 
 	void save(final EmployeePositionRequest empPositionRequest);
 	
+	void save(final Long id, final EmployeePositionRequest empPositionRequest);
+	
 	List<EmployeePosition> fetchAll();
 }

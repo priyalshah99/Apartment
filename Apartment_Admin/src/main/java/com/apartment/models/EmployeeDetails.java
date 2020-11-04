@@ -26,10 +26,11 @@ public class EmployeeDetails {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int employeeId;
+	private Long employeeId;
 	private String name;
 	private String contact;
 	private String address;
+	private boolean active;
 	
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "employeePositionId", nullable = false)

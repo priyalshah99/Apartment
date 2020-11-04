@@ -22,7 +22,7 @@ public class MeetingServiceImpl implements MeetingService {
 
 	@Override
 	public void addMeeting(MeetingRequest meetingRequest) {
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(Constants.DATE_FORMAT);
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(Constants.DATE_TIME_FORMAT);
 		Meetings meeting = new Meetings();
 		meeting.setAgenda(meetingRequest.getAgenda());
 		meeting.setTopic(meetingRequest.getTopic());
@@ -46,5 +46,24 @@ public class MeetingServiceImpl implements MeetingService {
 	@Override
 	public Meetings fetchMeeting(Long id) {
 		return meetingRepo.getOne(id);
+	}
+
+	@Override
+	public void updateMeeting(Long id, MeetingRequest meetingRequest) {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(Constants.DATE_TIME_FORMAT);
+		Meetings meeting = meetingRepo.getOne(id);
+		meeting.setAgenda(meetingRequest.getAgenda());
+		meeting.setTopic(meetingRequest.getTopic());
+		meeting.setStartTime(Timestamp.valueOf(LocalDateTime.parse(meetingRequest.getStartTime(),formatter)));
+		meeting.setEndTime(Timestamp.valueOf(LocalDateTime.parse(meetingRequest.getEndTime(),formatter)));
+		meeting.setMinutesOfMeeting(meetingRequest.getMinutesOfMeeting());
+		
+		meetingRepo.save(meeting);
+		
+	}
+
+	@Override
+	public void deleteMeeting(Long id) {
+		meetingRepo.deleteById(id);
 	}
 }

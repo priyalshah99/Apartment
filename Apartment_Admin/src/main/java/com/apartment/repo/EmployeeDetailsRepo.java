@@ -7,6 +7,6 @@ import com.apartment.models.Election;
 import com.apartment.models.EmployeeDetails;
 
 @Repository
-public interface EmployeeDetailsRepo extends JpaRepository <EmployeeDetails,Integer> {
+public interface EmployeeDetailsRepo extends JpaRepository <EmployeeDetails,Long> {
 
 }

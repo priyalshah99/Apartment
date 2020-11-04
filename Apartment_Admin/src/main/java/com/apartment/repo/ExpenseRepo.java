@@ -7,6 +7,6 @@ import com.apartment.models.Election;
 import com.apartment.models.Expense;
 
 @Repository
-public interface ExpenseRepo extends JpaRepository <Expense,Integer>{
+public interface ExpenseRepo extends JpaRepository <Expense,Long>{
 
 }

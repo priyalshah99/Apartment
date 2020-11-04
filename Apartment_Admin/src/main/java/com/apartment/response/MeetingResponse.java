@@ -1,6 +1,9 @@
 package com.apartment.response;
 
+import java.time.format.DateTimeFormatter;
+
 import com.apartment.models.Meetings;
+import com.apartment.utils.Constants;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -21,6 +24,8 @@ public class MeetingResponse {
 		response.setTopic(meeting.getTopic());
 		response.setAgenda(meeting.getAgenda());
 		response.setMinutesOfMeeting(meeting.getMinutesOfMeeting());
+		response.setStartTime(meeting.getStartTime().toLocalDateTime().format(DateTimeFormatter.ofPattern(Constants.DATE_TIME_FORMAT)));
+		response.setEndTime(meeting.getEndTime().toLocalDateTime().format(DateTimeFormatter.ofPattern(Constants.DATE_TIME_FORMAT)));
 		return response;
 	}
 }

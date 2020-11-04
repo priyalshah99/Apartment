@@ -1,0 +1,26 @@
+package com.apartment.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.apartment.request.EmployeeDetailsRequest;
+import com.apartment.service.EmployeeDetailsService;
+
+@RestController
+@RequestMapping("/employeeDetails")
+public class EmployeeDetailsController {
+
+	@Autowired
+	private EmployeeDetailsService employeeDetailsService;
+	
+	@PostMapping("/")
+	public String addEmployee(@RequestBody EmployeeDetailsRequest empRequest) {
+		return "Employee added successfully";
+	}
+	
+	@PutMapping("/{id}")
+	public String updateEmployee(@PathVariable final long id,@RequestBody EmployeeDetailsRequest empRequest)
+}

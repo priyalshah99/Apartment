@@ -30,4 +30,15 @@ public class EmployeePositionServiceImpl implements EmployeePositionService {
 	public List<EmployeePosition> fetchAll() {
 		return employeePositionRepo.findAll();
 	}
+
+	@Override
+	public void save(Long id, EmployeePositionRequest empPositionRequest) {
+		EmployeePosition empPosition = employeePositionRepo.getOne(id);
+		empPosition.setPositionName(empPositionRequest.getPositionName());
+		empPosition.setSalary(empPositionRequest.getSalary());
+		empPosition.setResponsibilities(empPositionRequest.getResponsibilities());
+		
+		employeePositionRepo.save(empPosition);
+		
+	}
 }

@@ -3,9 +3,12 @@ package com.apartment.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +20,7 @@ import com.apartment.service.MeetingService;
 
 @RestController
 @RequestMapping("/meeting")
+@CrossOrigin(origins="http://localhost:4200")
 public class MeetingController {
 	
 	@Autowired
@@ -31,6 +35,18 @@ public class MeetingController {
 		} catch (Exception e) {
 			return "Error occurred while creating meeting, because of,"+e.getMessage();
 		}
+	}
+	
+	@PutMapping("/{id}")
+	public String updateMeeting(@PathVariable final Long id,@RequestBody MeetingRequest request) {
+		meetingService.updateMeeting(id, request);
+		return "Meeting updated successfully";
+	}
+	
+	@DeleteMapping("/{id}")
+	public String deleteMeeting(@PathVariable final Long id) {
+		meetingService.deleteMeeting(id);
+		return "Meeting deleted successfully";
 	}
 	
 	@GetMapping("/{state}")
