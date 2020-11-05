@@ -57,7 +57,7 @@ public class IncomeController {
 		
 	}
 	
-	@GetMapping("/filter")
+	@GetMapping("/filter/")
 	public List<IncomeResponse> filter(@RequestParam final String startDate, @RequestParam final String endDate) {
 		return incomeService.filter(startDate, endDate)
 				.stream()

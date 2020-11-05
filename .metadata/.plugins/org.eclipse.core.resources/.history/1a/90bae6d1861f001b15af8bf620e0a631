@@ -16,10 +16,6 @@ public class FlatsServiceImpl implements FlatsService {
 
 	@Autowired
 	private FlatsRepo flatsRepo;
-	
-	@Autowired
-	private OwnerRepo ownerRepo;
-
 
 	@Override
 	public void saveFlat(FlatsRequest flatRequest) {
@@ -28,7 +24,7 @@ public class FlatsServiceImpl implements FlatsService {
 		flat.setBhk(flatRequest.getBhk());
 		flat.setParkingSlot(flatRequest.getParkingSlot());
 		flat.setOccupied(false);
-	//	flat.setOwner(ownerRepo.getOne(flatRequest.getOwnerId()));
+		flat.setOwner(OwnerRepo.getOne(flatRequest.getOwnerId()));
 		
 		flatsRepo.save(flat);
 	}

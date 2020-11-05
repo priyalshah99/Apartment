@@ -9,8 +9,8 @@ public class FlatsRequest {
 	private String flatNo;
     private int bhk;
     private String parkingSlot;
- //   private boolean occupied;
- //   private long ownerId;
+    private boolean occupied;
+    private long ownerId;
 
 }
 /*
@@ -18,9 +18,7 @@ public class FlatsRequest {
   	"flatNo":"A-101",
   	"bhk":2,
   	"parkingSlot":"3A101",
-  	
+  	"occupied":"0",
+  	"ownerId":"1"
   }
 */
-/*
- * "occupied":"1", "ownerId":"1"
- */

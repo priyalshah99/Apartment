@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.apartment.models.Flats;
 import com.apartment.repo.FlatsRepo;
-import com.apartment.repo.OwnerRepo;
 import com.apartment.request.FlatsRequest;
 import com.apartment.service.FlatsService;
 
@@ -16,10 +15,6 @@ public class FlatsServiceImpl implements FlatsService {
 
 	@Autowired
 	private FlatsRepo flatsRepo;
-	
-	@Autowired
-	private OwnerRepo ownerRepo;
-
 
 	@Override
 	public void saveFlat(FlatsRequest flatRequest) {
@@ -28,7 +23,7 @@ public class FlatsServiceImpl implements FlatsService {
 		flat.setBhk(flatRequest.getBhk());
 		flat.setParkingSlot(flatRequest.getParkingSlot());
 		flat.setOccupied(false);
-	//	flat.setOwner(ownerRepo.getOne(flatRequest.getOwnerId()));
+		flat.setOwner(ownerRepo.getOne(flatRequest.getOwnerId()));
 		
 		flatsRepo.save(flat);
 	}
