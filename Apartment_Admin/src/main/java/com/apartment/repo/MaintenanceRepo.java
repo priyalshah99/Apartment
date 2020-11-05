@@ -7,6 +7,6 @@ import com.apartment.models.Election;
 import com.apartment.models.Maintenance;
 
 @Repository
-public interface MaintenanceRepo extends JpaRepository <Maintenance,Integer> {
+public interface MaintenanceRepo extends JpaRepository <Maintenance,Long> {
 
 }

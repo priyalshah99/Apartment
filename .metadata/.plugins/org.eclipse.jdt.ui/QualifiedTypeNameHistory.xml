@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.persistence.FetchType"/>
-<fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
-<fullyQualifiedTypeName name="javax.persistence.JoinTable"/>
 <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
 <fullyQualifiedTypeName name="javax.persistence.Column"/>
 <fullyQualifiedTypeName name="javax.persistence.Id"/>
-<fullyQualifiedTypeName name="com.apartment.utils.Constants"/>
 <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
 <fullyQualifiedTypeName name="java.sql.Timestamp"/>
 <fullyQualifiedTypeName name="org.springframework.transaction.annotation.EnableTransactionManagement"/>
@@ -35,7 +31,6 @@
 <fullyQualifiedTypeName name="com.apartment.service.ExpenseService"/>
 <fullyQualifiedTypeName name="com.apartment.repo.ExpenseRepo"/>
 <fullyQualifiedTypeName name="com.apartment.service.FlatsService"/>
-<fullyQualifiedTypeName name="com.apartment.repo.FlatsRepo"/>
 <fullyQualifiedTypeName name="com.apartment.service.FundsService"/>
 <fullyQualifiedTypeName name="com.apartment.repo.FundsRepo"/>
 <fullyQualifiedTypeName name="com.apartment.service.IncomeService"/>
@@ -57,7 +52,12 @@
 <fullyQualifiedTypeName name="com.apartment.request.OwnerRequest"/>
 <fullyQualifiedTypeName name="com.apartment.models.Owner"/>
 <fullyQualifiedTypeName name="com.apartment.response.ComplaintResponse"/>
-<fullyQualifiedTypeName name="java.util.stream.Collectors"/>
 <fullyQualifiedTypeName name="com.apartment.request.EmployeePositionRequest"/>
+<fullyQualifiedTypeName name="com.apartment.request.EmployeeDetailsRequest"/>
+<fullyQualifiedTypeName name="com.apartment.response.EmployeePositionResponse"/>
+<fullyQualifiedTypeName name="com.apartment.utils.Constants"/>
+<fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+<fullyQualifiedTypeName name="com.apartment.repo.FlatsRepo"/>
 </qualifiedTypeNameHistroy>

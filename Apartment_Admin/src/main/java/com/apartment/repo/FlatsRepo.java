@@ -13,5 +13,6 @@ public interface FlatsRepo extends JpaRepository <Flats,Integer> {
 
 	List<Flats> findByOccupiedTrue();
 	List<Flats> findByOccupiedFalse();
+	Flats findFirstByFlatNo(final String flatNo);
 
 }

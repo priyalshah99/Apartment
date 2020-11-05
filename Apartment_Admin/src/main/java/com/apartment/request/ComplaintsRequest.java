@@ -16,8 +16,8 @@ public class ComplaintsRequest {
 /*
  {
  	"date":"",
- 	"description":"This is complain",
- 	"status":1,
+ 	"description":"This is test complain",
+ 	"status":0,
  	"ownerId":1
  }
  */
