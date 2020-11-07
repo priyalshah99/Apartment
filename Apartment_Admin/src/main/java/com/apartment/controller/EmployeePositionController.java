@@ -44,8 +44,8 @@ public class EmployeePositionController {
 	}
 
 	@GetMapping("/{id}")
-	public EmployeePositionResponse getOne(@PathVariable final long id) {
-		return EmployeePositionResponse.build(employeePositionService.fetch(id));
+	public String getOne(@PathVariable final long id) {
+		return employeePositionService.fetch(id).getPositionName();
 	}
 	
 }
