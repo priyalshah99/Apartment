@@ -1,7 +1,10 @@
 package com.apartment.service.impl;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+import com.apartment.utils.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,8 +25,9 @@ public class ComplaintsServiceImpl implements ComplaintsService{
 
 	@Override
 	public void saveComplaint(ComplaintsRequest complaintRequest) {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(Constants.DATE_FORMAT);
 		Complaints complaint = new Complaints();
-		complaint.setDate(complaintRequest.getDate());
+		complaint.setDate(LocalDate.parse(complaintRequest.getDate(),formatter));
 		complaint.setDescription(complaintRequest.getDescription());
 		complaint.setStatus(complaintRequest.getStatus());
 		complaint.setOwner(ownerRepo.getOne(complaintRequest.getOwnerId()));

@@ -32,6 +32,11 @@ public class EmployeePositionServiceImpl implements EmployeePositionService {
 	}
 
 	@Override
+	public EmployeePosition fetch(Long id) {
+		return employeePositionRepo.getOne(id);
+	}
+
+	@Override
 	public void save(Long id, EmployeePositionRequest empPositionRequest) {
 		EmployeePosition empPosition = employeePositionRepo.getOne(id);
 		empPosition.setPositionName(empPositionRequest.getPositionName());

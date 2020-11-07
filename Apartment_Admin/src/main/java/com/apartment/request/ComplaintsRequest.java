@@ -8,14 +8,14 @@ import lombok.Setter;
 @Getter
 @Setter
 public class ComplaintsRequest {
-	private Date date;	
+	private String date;
 	private String description;	
 	private int status;
 	private long ownerId;
 }
 /*
  {
- 	"date":"",
+ 	"date":"13/05/2020",
  	"description":"This is test complain",
  	"status":0,
  	"ownerId":1

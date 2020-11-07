@@ -42,5 +42,10 @@ public class EmployeePositionController {
 		employeePositionService.save(id, empPositionRequest);
 		return "Employee Position updated successfully";
 	}
+
+	@GetMapping("/{id}")
+	public EmployeePositionResponse getOne(@PathVariable final long id) {
+		return EmployeePositionResponse.build(employeePositionService.fetch(id));
+	}
 	
 }
