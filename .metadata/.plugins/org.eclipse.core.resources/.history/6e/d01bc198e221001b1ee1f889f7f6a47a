@@ -47,9 +47,8 @@ public class EmployeePositionServiceImpl implements EmployeePositionService {
 
 	}
 
-	 @Override 
-	 public Long findByName(String name) { 
-		 return employeePositionRepo.findFirstByPositionName(name).getEmployeePositionId();
+/*	 @Override public Long findByName(String name) { 
+		 return employeePositionRepo.findFirstByName(name).getEmployeePositionId();
 	 }
-	
+	*/ 
 }

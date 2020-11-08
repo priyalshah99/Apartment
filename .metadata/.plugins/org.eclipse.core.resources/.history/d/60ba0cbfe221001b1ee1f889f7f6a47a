@@ -50,11 +50,11 @@ public class EmployeePositionController {
 		return employeePositionService.fetch(id).getPositionName();
 	}
 	
-	@GetMapping("/byname/{name}")
+/*	@GetMapping("/byname/{name}")
 	public Long getIdFromName(@PathVariable final String name) {
 		return employeePositionService.findByName(name);
 	}
-	
+*/	
 	
 	
 }
