@@ -44,17 +44,17 @@ public class EmployeePositionController {
 		employeePositionService.save(id, empPositionRequest);
 		return "Employee Position updated successfully";
 	}
-	
+
 	@GetMapping("/{id}")
 	public String getOne(@PathVariable final long id) {
 		return employeePositionService.fetch(id).getPositionName();
 	}
 	
-	@GetMapping("/byname/{name}")
+/*	@GetMapping("/byname/{name}")
 	public Long getIdFromName(@PathVariable final String name) {
 		return employeePositionService.findByName(name);
 	}
-	
+*/	
 	
 	
 }

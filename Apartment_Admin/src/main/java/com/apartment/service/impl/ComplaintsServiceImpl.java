@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+import com.apartment.utils.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +29,7 @@ public class ComplaintsServiceImpl implements ComplaintsService{
 
 	@Override
 	public void saveComplaint(ComplaintsRequest complaintRequest) {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(Constants.DATE_FORMAT);
 		Complaints complaint = new Complaints();
 		complaint.setDate(LocalDate.parse(complaintRequest.getDate(),formatter));
 		complaint.setDescription(complaintRequest.getDescription());
@@ -71,6 +73,15 @@ public class ComplaintsServiceImpl implements ComplaintsService{
 		complaint.setDescription(complaintRequest.getDescription());
 		complaint.setStatus(complaintRequest.getStatus());
 		complaint.setOwner(ownerRepo.getOne(complaintRequest.getOwnerId()));
+		
+		complaintsRepo.save(complaint);
+		
+	}
+
+	@Override
+	public void updateComplaintStatus(Long id, int status) {
+		Complaints complaint = complaintsRepo.getOne(id);
+		complaint.setStatus(status);
 		
 		complaintsRepo.save(complaint);
 		

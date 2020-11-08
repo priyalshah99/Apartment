@@ -1,0 +1,47 @@
+package com.apartment.models;
+
+import java.time.LocalDate;
+import java.util.Date;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
+@Entity
+public class Complaints {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long complaintId;	
+<<<<<<< HEAD
+	private LocalDate date;	
+=======
+	private LocalDate date;
+>>>>>>> 2c20f9190d1b4ff5d767aba79f80a1e0f833cb2d
+	private String description;	
+	private int upVote;	
+	private int downVote;	
+	private int status;
+	
+	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "ownerId", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
+    private Owner owner;
+	
+}

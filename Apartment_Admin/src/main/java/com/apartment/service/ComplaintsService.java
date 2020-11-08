@@ -11,6 +11,8 @@ public interface ComplaintsService {
 	
 	public void saveComplaint(final ComplaintsRequest complaintRequest, final Long id);
 	
+	public void updateComplaintStatus(final Long id, final int status);
+	
 	public int upvote(Long id);
 	
 	public int downvote(Long id);

@@ -13,7 +13,6 @@
 <fullyQualifiedTypeName name="com.apartment.models.Election"/>
 <fullyQualifiedTypeName name="com.apartment.models.EmployeeDetails"/>
 <fullyQualifiedTypeName name="com.apartment.models.Expense"/>
-<fullyQualifiedTypeName name="com.apartment.models.EmployeePosition"/>
 <fullyQualifiedTypeName name="com.apartment.models.Funds"/>
 <fullyQualifiedTypeName name="com.apartment.models.Income"/>
 <fullyQualifiedTypeName name="com.apartment.models.Maintenance"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
 <fullyQualifiedTypeName name="com.apartment.repo.FlatsRepo"/>
 <fullyQualifiedTypeName name="com.apartment.repo.OwnerRepo"/>
+<fullyQualifiedTypeName name="com.apartment.models.EmployeePosition"/>
 </qualifiedTypeNameHistroy>

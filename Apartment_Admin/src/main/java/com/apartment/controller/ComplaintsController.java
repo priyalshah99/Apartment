@@ -31,6 +31,12 @@ public class ComplaintsController {
 		return "Complaints added successfully";
 	}
 	
+	@PutMapping("/{id}/status")
+	public String updateStatus(@PathVariable final long id,@RequestBody final int status) {
+		complaintsService.updateComplaintStatus(id, status);
+		return "Complaint status updated successfully";
+	}
+	
 	@PutMapping("/{id}")
 	public String updateComplaints(@RequestBody final ComplaintsRequest complaintRequest, @PathVariable final long id) {
 		complaintsService.saveComplaint(complaintRequest, id);

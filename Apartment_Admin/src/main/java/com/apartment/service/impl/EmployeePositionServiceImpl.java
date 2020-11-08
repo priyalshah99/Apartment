@@ -22,7 +22,7 @@ public class EmployeePositionServiceImpl implements EmployeePositionService {
 		empPosition.setPositionName(empPositionRequest.getPositionName());
 		empPosition.setSalary(empPositionRequest.getSalary());
 		empPosition.setResponsibilities(empPositionRequest.getResponsibilities());
-		
+
 		employeePositionRepo.save(empPosition);
 	}
 
@@ -32,23 +32,23 @@ public class EmployeePositionServiceImpl implements EmployeePositionService {
 	}
 
 	@Override
-	public void save(Long id, EmployeePositionRequest empPositionRequest) {
-		EmployeePosition empPosition = employeePositionRepo.getOne(id);
-		empPosition.setPositionName(empPositionRequest.getPositionName());
-		empPosition.setSalary(empPositionRequest.getSalary());
-		empPosition.setResponsibilities(empPositionRequest.getResponsibilities());
-		
-		employeePositionRepo.save(empPosition);
-		
-	}
-
-	@Override
 	public EmployeePosition fetch(Long id) {
 		return employeePositionRepo.getOne(id);
 	}
 
 	@Override
-	public Long findByName(String name) {
-		return employeePositionRepo.findFirstByName(name).getEmployeePositionId();
+	public void save(Long id, EmployeePositionRequest empPositionRequest) {
+		EmployeePosition empPosition = employeePositionRepo.getOne(id);
+		empPosition.setPositionName(empPositionRequest.getPositionName());
+		empPosition.setSalary(empPositionRequest.getSalary());
+		empPosition.setResponsibilities(empPositionRequest.getResponsibilities());
+
+		employeePositionRepo.save(empPosition);
+
 	}
+
+/*	 @Override public Long findByName(String name) { 
+		 return employeePositionRepo.findFirstByName(name).getEmployeePositionId();
+	 }
+	*/ 
 }

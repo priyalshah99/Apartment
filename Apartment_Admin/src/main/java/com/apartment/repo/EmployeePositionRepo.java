@@ -6,8 +6,8 @@ import org.springframework.stereotype.Repository;
 import com.apartment.models.EmployeePosition;
 
 @Repository
-public interface EmployeePositionRepo extends JpaRepository <EmployeePosition,Long> {
+public interface EmployeePositionRepo extends JpaRepository<EmployeePosition,Long> {
 
-	EmployeePosition findFirstByName(final String name);
+	//EmployeePosition findFirstByName(final String name);
 	
 }

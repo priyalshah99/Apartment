@@ -15,5 +15,6 @@ public interface EmployeePositionService {
 	
 	EmployeePosition fetch(final Long id);
 	
-	Long findByName(final String name);
+	//Long findByName(final String name);
+
 }
