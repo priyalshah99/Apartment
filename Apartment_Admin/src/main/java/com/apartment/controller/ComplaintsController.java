@@ -19,7 +19,7 @@ import com.apartment.service.ComplaintsService;
 
 @RestController
 @RequestMapping("/complaints")
-//@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="http://localhost:4200")
 public class ComplaintsController {
 
 	@Autowired

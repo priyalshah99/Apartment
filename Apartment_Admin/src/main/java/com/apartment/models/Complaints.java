@@ -1,5 +1,6 @@
 package com.apartment.models;
 
+import java.time.LocalDate;
 import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -27,7 +28,7 @@ public class Complaints {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long complaintId;	
-	private Date date;	
+	private LocalDate date;	
 	private String description;	
 	private int upVote;	
 	private int downVote;	

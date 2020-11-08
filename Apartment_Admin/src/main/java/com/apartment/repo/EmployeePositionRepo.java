@@ -8,4 +8,6 @@ import com.apartment.models.EmployeePosition;
 @Repository
 public interface EmployeePositionRepo extends JpaRepository <EmployeePosition,Long> {
 
+	EmployeePosition findFirstByName(final String name);
+	
 }

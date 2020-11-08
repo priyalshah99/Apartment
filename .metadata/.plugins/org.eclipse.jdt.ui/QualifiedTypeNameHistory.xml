@@ -38,7 +38,6 @@
 <fullyQualifiedTypeName name="com.apartment.service.MaintenanceService"/>
 <fullyQualifiedTypeName name="com.apartment.repo.MaintenanceRepo"/>
 <fullyQualifiedTypeName name="com.apartment.service.OwnerService"/>
-<fullyQualifiedTypeName name="com.apartment.repo.OwnerRepo"/>
 <fullyQualifiedTypeName name="com.apartment.service.PositionsService"/>
 <fullyQualifiedTypeName name="com.apartment.repo.PositionsRepo"/>
 <fullyQualifiedTypeName name="com.apartment.service.SalaryService"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
 <fullyQualifiedTypeName name="com.apartment.repo.FlatsRepo"/>
+<fullyQualifiedTypeName name="com.apartment.repo.OwnerRepo"/>
 </qualifiedTypeNameHistroy>

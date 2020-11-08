@@ -1,5 +1,7 @@
 package com.apartment.service.impl;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +12,14 @@ import com.apartment.repo.ComplaintsRepo;
 import com.apartment.repo.OwnerRepo;
 import com.apartment.request.ComplaintsRequest;
 import com.apartment.service.ComplaintsService;
+import com.apartment.utils.Constants;
 
 @Service
 public class ComplaintsServiceImpl implements ComplaintsService{
 
+	
+	private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern(Constants.DATE_FORMAT);
+	
 	@Autowired
 	private ComplaintsRepo complaintsRepo;
 	
@@ -23,7 +29,7 @@ public class ComplaintsServiceImpl implements ComplaintsService{
 	@Override
 	public void saveComplaint(ComplaintsRequest complaintRequest) {
 		Complaints complaint = new Complaints();
-		complaint.setDate(complaintRequest.getDate());
+		complaint.setDate(LocalDate.parse(complaintRequest.getDate(),formatter));
 		complaint.setDescription(complaintRequest.getDescription());
 		complaint.setStatus(complaintRequest.getStatus());
 		complaint.setOwner(ownerRepo.getOne(complaintRequest.getOwnerId()));
@@ -61,7 +67,7 @@ public class ComplaintsServiceImpl implements ComplaintsService{
 	@Override
 	public void saveComplaint(ComplaintsRequest complaintRequest, Long id) {
 		Complaints complaint = complaintsRepo.getOne(id);
-		complaint.setDate(complaintRequest.getDate());
+		complaint.setDate(LocalDate.parse(complaintRequest.getDate(),formatter));
 		complaint.setDescription(complaintRequest.getDescription());
 		complaint.setStatus(complaintRequest.getStatus());
 		complaint.setOwner(ownerRepo.getOne(complaintRequest.getOwnerId()));

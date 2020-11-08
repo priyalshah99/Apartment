@@ -41,4 +41,14 @@ public class EmployeePositionServiceImpl implements EmployeePositionService {
 		employeePositionRepo.save(empPosition);
 		
 	}
+
+	@Override
+	public EmployeePosition fetch(Long id) {
+		return employeePositionRepo.getOne(id);
+	}
+
+	@Override
+	public Long findByName(String name) {
+		return employeePositionRepo.findFirstByName(name).getEmployeePositionId();
+	}
 }

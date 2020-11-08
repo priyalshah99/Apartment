@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,6 +19,7 @@ import com.apartment.service.EmployeePositionService;
 
 @RestController
 @RequestMapping("/employeePositions")
+@CrossOrigin(origins="http://localhost:4200")
 public class EmployeePositionController {
 
 	@Autowired
@@ -42,5 +44,17 @@ public class EmployeePositionController {
 		employeePositionService.save(id, empPositionRequest);
 		return "Employee Position updated successfully";
 	}
+	
+	@GetMapping("/{id}")
+	public String getOne(@PathVariable final long id) {
+		return employeePositionService.fetch(id).getPositionName();
+	}
+	
+	@GetMapping("/byname/{name}")
+	public Long getIdFromName(@PathVariable final String name) {
+		return employeePositionService.findByName(name);
+	}
+	
+	
 	
 }

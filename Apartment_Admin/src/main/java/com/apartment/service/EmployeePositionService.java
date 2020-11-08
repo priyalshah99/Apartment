@@ -12,4 +12,8 @@ public interface EmployeePositionService {
 	void save(final Long id, final EmployeePositionRequest empPositionRequest);
 	
 	List<EmployeePosition> fetchAll();
+	
+	EmployeePosition fetch(final Long id);
+	
+	Long findByName(final String name);
 }
