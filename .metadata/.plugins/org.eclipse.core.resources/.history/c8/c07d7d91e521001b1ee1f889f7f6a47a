@@ -20,7 +20,7 @@ import com.apartment.service.EmployeePositionService;
 
 @RestController
 @RequestMapping("/employeePositions")
-//@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="http://localhost:4200")
 public class EmployeePositionController {
 
 	@Autowired

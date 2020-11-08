@@ -51,11 +51,5 @@ public class EmployeePositionServiceImpl implements EmployeePositionService {
 	 public Long findByName(String name) { 
 		 return employeePositionRepo.findFirstByPositionName(name).getEmployeePositionId();
 	 }
-
-	@Override
-	public EmployeePosition fetchEmployeePosition(Long id) {
-		
-		return employeePositionRepo.getOne(id);
-	}
 	
 }

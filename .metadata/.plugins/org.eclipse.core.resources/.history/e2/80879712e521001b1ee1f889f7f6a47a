@@ -55,7 +55,7 @@ public class EmployeePositionServiceImpl implements EmployeePositionService {
 	@Override
 	public EmployeePosition fetchEmployeePosition(Long id) {
 		
-		return employeePositionRepo.getOne(id);
+		return EmployeePositionRepo.getOne(id);
 	}
 	
 }

@@ -15,12 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.apartment.request.EmployeePositionRequest;
 import com.apartment.response.EmployeePositionResponse;
-import com.apartment.response.MeetingResponse;
 import com.apartment.service.EmployeePositionService;
 
 @RestController
 @RequestMapping("/employeePositions")
-//@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="http://localhost:4200")
 public class EmployeePositionController {
 
 	@Autowired
@@ -47,11 +46,10 @@ public class EmployeePositionController {
 	}
 
 	@GetMapping("/fetch/{id}")
-	public EmployeePositionResponse getEmployeePosition(@PathVariable final long id) {
-		return EmployeePositionResponse.build(employeePositionService.fetchEmployeePosition(id));
+	public String getOne(@PathVariable final long id) {
+		return employeePositionService.build(employeePositionService.fetchEmployeePosition(id));
 	}
 	
-		
 	@GetMapping("/byname/{name}")
 	public Long getIdFromName(@PathVariable final String name) {
 		return employeePositionService.findByName(name);
