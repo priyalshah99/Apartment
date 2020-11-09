@@ -5,6 +5,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class EmployeePositionRequest {
+public class ComplaintsStatusRequest {
 
+	private int status;
+	
 }

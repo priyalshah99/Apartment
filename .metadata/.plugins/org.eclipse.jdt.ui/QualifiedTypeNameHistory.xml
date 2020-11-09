@@ -26,7 +26,6 @@
 <fullyQualifiedTypeName name="com.apartment.service.EmployeeDetailsService"/>
 <fullyQualifiedTypeName name="com.apartment.repo.EmployeeDetailsRepo"/>
 <fullyQualifiedTypeName name="com.apartment.service.EmployeePositionService"/>
-<fullyQualifiedTypeName name="com.apartment.repo.EmployeePositionRepo"/>
 <fullyQualifiedTypeName name="com.apartment.service.ExpenseService"/>
 <fullyQualifiedTypeName name="com.apartment.repo.ExpenseRepo"/>
 <fullyQualifiedTypeName name="com.apartment.service.FlatsService"/>
@@ -52,7 +51,6 @@
 <fullyQualifiedTypeName name="com.apartment.response.ComplaintResponse"/>
 <fullyQualifiedTypeName name="com.apartment.request.EmployeePositionRequest"/>
 <fullyQualifiedTypeName name="com.apartment.request.EmployeeDetailsRequest"/>
-<fullyQualifiedTypeName name="com.apartment.response.EmployeePositionResponse"/>
 <fullyQualifiedTypeName name="com.apartment.utils.Constants"/>
 <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
 <fullyQualifiedTypeName name="java.util.List"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="com.apartment.repo.FlatsRepo"/>
 <fullyQualifiedTypeName name="com.apartment.repo.OwnerRepo"/>
 <fullyQualifiedTypeName name="com.apartment.models.EmployeePosition"/>
+<fullyQualifiedTypeName name="com.apartment.repo.EmployeePositionRepo"/>
+<fullyQualifiedTypeName name="com.apartment.response.EmployeePositionResponse"/>
 </qualifiedTypeNameHistroy>
