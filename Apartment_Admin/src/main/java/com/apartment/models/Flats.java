@@ -28,7 +28,7 @@ public class Flats {
     private String parkingSlot;
     
     @OneToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "ownerId", nullable = false)
+    @JoinColumn(name = "ownerId", nullable = true)
     private Owner owner;
 
 

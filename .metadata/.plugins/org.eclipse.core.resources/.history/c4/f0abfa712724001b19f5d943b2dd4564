@@ -62,7 +62,7 @@ public class MaintenanceServiceImpl implements MaintenanceService {
 
 	@Override
 	public List<Maintenance> fetchAll() {
-		
-		return maintenanceRepo.findAll();
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

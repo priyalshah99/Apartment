@@ -26,7 +26,7 @@ public class Funds {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long fundsId;
+	private Long fundsId;
 	private double amount;
 	private Date date;
 	private String reason;

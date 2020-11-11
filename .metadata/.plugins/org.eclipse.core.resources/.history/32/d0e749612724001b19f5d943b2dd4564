@@ -2,7 +2,6 @@ package com.apartment.service.impl;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -52,17 +51,5 @@ public class MaintenanceServiceImpl implements MaintenanceService {
 	@Override
 	public void deleteEntry(Long id) {
 		maintenanceRepo.deleteById(id);
-	}
-
-	@Override
-	public Maintenance fetch(Long id) {
-		
-		return maintenanceRepo.getOne(id);
-	}
-
-	@Override
-	public List<Maintenance> fetchAll() {
-		
-		return maintenanceRepo.findAll();
 	}
 }

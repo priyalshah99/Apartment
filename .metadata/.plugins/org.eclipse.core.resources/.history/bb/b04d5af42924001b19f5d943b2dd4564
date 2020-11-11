@@ -15,21 +15,23 @@ public class FundsServiceImpl implements FundsService {
 
 	@Autowired
 	private FundsRepo fundsRepo;
-	//amt,date,reason,mode,owner
 
 	@Override
 	public void saveFunds(FundsRequest fundsRequest) {
+		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void updateFunds(Long id, FundsRequest fundsRequest) {
+		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public List<Funds> getAll() {
-		return fundsRepo.findAll();
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
