@@ -12,15 +12,17 @@ public class FlatResponse {
     private int bhk;
     private String parkingSlot;
     private String ownerName;
+    private boolean occupied;
     
-    public FlatResponse(final String flatNo, final int bhk, final String parkingSlot, final String ownerName) {
+    public FlatResponse(final String flatNo, final int bhk, final String parkingSlot, final String ownerName, final boolean occupied) {
     	this.flatNo = flatNo;
     	this.bhk = bhk;
     	this.parkingSlot = parkingSlot;
     	this.ownerName = ownerName;
+    	this.occupied=occupied;
     }
     
     public static FlatResponse build(final Flats flat) {
-    	return new FlatResponse(flat.getFlatNo(),flat.getBhk(),flat.getParkingSlot(),flat.getOwner().getName());
+    	return new FlatResponse(flat.getFlatNo(),flat.getBhk(),flat.getParkingSlot(),flat.getOwner().getName(),flat.isOccupied());
     }
 }

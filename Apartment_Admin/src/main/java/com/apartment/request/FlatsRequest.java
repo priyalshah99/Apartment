@@ -10,7 +10,7 @@ public class FlatsRequest {
     private int bhk;
     private String parkingSlot;
  //   private boolean occupied;
- //   private long ownerId;
+    private long ownerId;
 
 }
 /*

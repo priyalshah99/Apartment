@@ -1,5 +1,6 @@
 package com.apartment.models;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Set;
 
@@ -27,7 +28,7 @@ public class Owner {
 	private String name;
 	private String contactNo;
 	private String email;
-	private Date dateOfPurchase;
+	private LocalDate dateOfPurchase;
 
 	@OneToOne(fetch = FetchType.LAZY,
             cascade =  CascadeType.ALL,

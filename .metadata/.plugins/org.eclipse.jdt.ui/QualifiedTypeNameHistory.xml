@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
-<fullyQualifiedTypeName name="java.util.Set"/>
-<fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
 <fullyQualifiedTypeName name="javax.persistence.Column"/>
 <fullyQualifiedTypeName name="javax.persistence.Id"/>
 <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
@@ -60,4 +57,7 @@
 <fullyQualifiedTypeName name="com.apartment.models.EmployeePosition"/>
 <fullyQualifiedTypeName name="com.apartment.repo.EmployeePositionRepo"/>
 <fullyQualifiedTypeName name="com.apartment.response.EmployeePositionResponse"/>
+<fullyQualifiedTypeName name="lombok.Setter"/>
+<fullyQualifiedTypeName name="lombok.Getter"/>
+<fullyQualifiedTypeName name="com.apartment.request.ComplaintsStatusRequest"/>
 </qualifiedTypeNameHistroy>

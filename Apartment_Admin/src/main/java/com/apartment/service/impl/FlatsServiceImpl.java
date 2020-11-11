@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.apartment.models.EmployeeDetails;
 import com.apartment.models.Flats;
 import com.apartment.repo.FlatsRepo;
 import com.apartment.repo.OwnerRepo;
@@ -32,6 +33,15 @@ public class FlatsServiceImpl implements FlatsService {
 		
 		flatsRepo.save(flat);
 	}
+	
+	
+	@Override
+	public Flats setOccupied(int id, boolean occupied) {
+		Flats flat = flatsRepo.getOne(id);
+		flat.setOccupied(occupied);
+		flatsRepo.save(flat);
+		return flat;
+	}
 
 	@Override
 	public List<Flats> getEmptyFlats() {
@@ -46,6 +56,18 @@ public class FlatsServiceImpl implements FlatsService {
 	@Override
 	public List<Flats> getAllFlats() {
 		return flatsRepo.findAll();
+	}
+
+	@Override
+	public void updateFlat(int id, FlatsRequest flatRequest) {
+		Flats flat = new Flats();
+		flat.setFlatNo(flatRequest.getFlatNo());
+		flat.setBhk(flatRequest.getBhk());
+		flat.setParkingSlot(flatRequest.getParkingSlot());
+		flat.setOccupied(false);
+		flat.setOwner(ownerRepo.getOne(flatRequest.getOwnerId()));
+		
+		flatsRepo.save(flat);
 	}
 	
 	

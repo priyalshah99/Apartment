@@ -1,0 +1,22 @@
+package com.apartment.service;
+
+import java.util.List;
+
+import com.apartment.models.Flats;
+import com.apartment.request.FlatsRequest;
+import com.apartment.request.IncomeRequest;
+
+public interface FlatsService {
+	
+	void saveFlat(final FlatsRequest flatRequest);
+	
+	void updateFlat(final Long id, final FlatsRequest flatsRequest);
+	
+	List<Flats> getEmptyFlats();
+	
+	List<Flats> getOccupiedFlats();
+	
+	List<Flats> getAllFlats();
+	
+
+}
