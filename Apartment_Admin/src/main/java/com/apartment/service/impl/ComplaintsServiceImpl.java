@@ -86,4 +86,13 @@ public class ComplaintsServiceImpl implements ComplaintsService{
 		complaintsRepo.save(complaint);
 		
 	}
+
+	@Override
+	public void updateComplaintDescription(long id, String description) {
+		Complaints complaint = complaintsRepo.getOne(id);
+		complaint.setDescription(description);
+		
+		complaintsRepo.save(complaint);
+		
+	}
 }

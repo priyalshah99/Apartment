@@ -7,6 +7,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.apartment.models.EmployeeDetails;
+import com.apartment.models.Flats;
 import com.apartment.models.Owner;
 import com.apartment.repo.OwnerRepo;
 import com.apartment.request.OwnerRequest;
@@ -43,6 +45,14 @@ public class OwnerServiceImpl implements OwnerService{
 		
 		ownerRepo.save(owner);
 	}
+	
+	@Override
+	public Owner setActive(Long id, boolean active) {
+		Owner owner = ownerRepo.getOne(id);
+		owner.setActive(active);
+		ownerRepo.save(owner);
+		return owner;
+	}
 
 	@Override
 	public void deleteOwner(Long id) {
@@ -57,5 +67,15 @@ public class OwnerServiceImpl implements OwnerService{
 	@Override
 	public List<Owner> fetchAll() {
 		return ownerRepo.findAll();
+	}
+	
+	@Override
+	public List<Owner> getInactiveOwner() {
+		return ownerRepo.findByActiveFalse();
+	}
+
+	@Override
+	public List<Owner> getActiveOwner() {
+		return ownerRepo.findByActiveTrue();
 	}
 }

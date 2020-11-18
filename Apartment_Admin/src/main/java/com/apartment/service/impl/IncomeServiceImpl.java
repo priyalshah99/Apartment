@@ -4,14 +4,13 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-//import com.apartment.exception.RecordAlreadyExistException;
+import com.apartment.exception.RecordAlreadyExistException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.apartment.models.Income;
 import com.apartment.repo.IncomeRepo;
 import com.apartment.request.IncomeRequest;
-import com.apartment.response.IncomeResponse;
 import com.apartment.service.IncomeService;
 import com.apartment.utils.Constants;
 
@@ -23,22 +22,21 @@ public class IncomeServiceImpl implements IncomeService {
 	@Autowired
 	private IncomeRepo incomeRepo;
 
-	/*
-	 * @Override public void saveIncome(IncomeRequest incomeRequest) {
-	 * if(!incomeRepo.findByDate(LocalDate.parse(incomeRequest.getDate(),formatter))
-	 * .isEmpty()) { throw new
-	 * RecordAlreadyExistException("Income record exists for date "+incomeRequest.
-	 * getDate()); } Income income = new Income();
-	 * income.setAmount(incomeRequest.getAmount());
-	 * income.setContactNo(incomeRequest.getContactNo());
-	 * income.setName(incomeRequest.getName());
-	 * income.setReason(incomeRequest.getReason());
-	 * income.setDate(LocalDate.parse(incomeRequest.getDate(),formatter));
-	 * 
-	 * incomeRepo.save(income);
-	 * 
-	 * }
-	 */
+	@Override
+	public void saveIncome(IncomeRequest incomeRequest) {
+		if(!incomeRepo.findByDate(LocalDate.parse(incomeRequest.getDate(),formatter)).isEmpty()) {
+		//	throw new RecordAlreadyExistException("Income record exists for date "+incomeRequest.getDate());
+		}
+		Income income = new Income();
+		income.setAmount(incomeRequest.getAmount());
+		income.setContactNo(incomeRequest.getContactNo());
+		income.setName(incomeRequest.getName());
+		income.setReason(incomeRequest.getReason());
+		income.setDate(LocalDate.parse(incomeRequest.getDate(),formatter));
+		
+		incomeRepo.save(income);
+		
+	}
 
 	@Override
 	public void saveIncome(Long id, IncomeRequest incomeRequest) {
@@ -72,12 +70,6 @@ public class IncomeServiceImpl implements IncomeService {
 	@Override
 	public List<Income> filter(String startDate, String endDate) {
 		return incomeRepo.findByDateBetween(LocalDate.parse(startDate,formatter), LocalDate.parse(endDate,formatter));
-	}
-
-	@Override
-	public void saveIncome(IncomeRequest incomeRequest) {
-		// TODO Auto-generated method stub
-		
 	}
 	
 }

@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.apartment.request.MeetingRequest;
 import com.apartment.request.OwnerRequest;
+import com.apartment.response.EmployeeResponse;
+import com.apartment.response.FlatResponse;
 import com.apartment.response.IncomeResponse;
 import com.apartment.response.MeetingResponse;
 import com.apartment.response.OwnerResponse;
@@ -41,6 +43,18 @@ public class OwnerController {
 		return "Owner updated successfully";
 	}
 	
+	@PutMapping("/{id}/active")
+	public OwnerResponse activeOwner(@PathVariable final long id) {
+		return OwnerResponse.build(ownerService.setActive(id, true));
+		
+	}
+	
+	@PutMapping("/{id}/inactive")
+	public OwnerResponse inactiveOwner(@PathVariable final long id) {
+		return OwnerResponse.build(ownerService.setActive(id, false));
+
+	}	
+	
 	@DeleteMapping("/{id}")
 	public String deleteOwner(@PathVariable final Long id) {
 		ownerService.deleteOwner(id);
@@ -58,5 +72,16 @@ public class OwnerController {
 				.stream()
 				.map(inc -> OwnerResponse.build(inc))
 				.collect(Collectors.toList());
+	}
+	
+	
+	@GetMapping("/active")
+	public List<OwnerResponse> fetchActive() {
+		return ownerService.getActiveOwner().stream().map(flt->OwnerResponse.build(flt)).collect(Collectors.toList());
+	}
+	
+	@GetMapping("/inactive")
+	public List<OwnerResponse> fetchInactive() {
+		return ownerService.getInactiveOwner().stream().map(flt->OwnerResponse.build(flt)).collect(Collectors.toList());
 	}
 }

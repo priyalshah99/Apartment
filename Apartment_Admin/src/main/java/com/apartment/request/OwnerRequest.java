@@ -11,13 +11,15 @@ public class OwnerRequest {
 	private String contactNo;
 	private String email;
 	private String dateOfPurchase;
+	private boolean active;
 	
 /*
  {
  	"name":"Priyal Shah",
  	"contactNo":"9878787878",
  	"email":"pshah@gmail.com",
- 	"dateOfPurchase":"27/12/2019"
+ 	"dateOfPurchase":"27/12/2019",
+ 	"active":true
  }
  */
 }

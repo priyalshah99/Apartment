@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.apartment.request.ComplaintsDescriptionRequest;
 import com.apartment.request.ComplaintsRequest;
 import com.apartment.request.ComplaintsStatusRequest;
 import com.apartment.response.ComplaintResponse;
@@ -35,6 +36,12 @@ public class ComplaintsController {
 	@PutMapping("/{id}/status")
 	public String updateStatus(@PathVariable final long id,@RequestBody final ComplaintsStatusRequest status) {
 		complaintsService.updateComplaintStatus(id, status.getStatus());
+		return "Complaint status updated successfully";
+	}
+	
+	@PutMapping("/{id}/description")
+	public String updateDescription(@PathVariable final long id,@RequestBody final ComplaintsDescriptionRequest description) {
+		complaintsService.updateComplaintDescription(id, description.getDescription());
 		return "Complaint status updated successfully";
 	}
 	

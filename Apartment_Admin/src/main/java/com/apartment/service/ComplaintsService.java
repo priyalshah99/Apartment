@@ -20,4 +20,6 @@ public interface ComplaintsService {
 	public List<Complaints> fetchAll();
 	
 	public Complaints fetch(final Long id);
+
+	public void updateComplaintDescription(long id, String description);
 }

@@ -6388,3 +6388,72 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 22:05:55.481
 !MESSAGE executing callback sts4.classpath.mzXYxSRv SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:11.930
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.mzXYxSRv
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:11.942
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.mzXYxSRv
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:11.952
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:11.962
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.mzXYxSRv => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:29.171
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:29.534
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@30c8f61c[org.springframework.tooling.boot.ls:1.17.0.202004200519(id=636)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:29.559
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:32.450
+!MESSAGE Boot LS startup time from start to initialized: 2864ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:32.497
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.zklriZqlisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:32.508
+!MESSAGE Creating project sorter...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:32.519
+!MESSAGE Creating project sorter... DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:32.530
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:32.541
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:32.551
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:32.564
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:32.575
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.zklriZql => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:32.586
+!MESSAGE classpath=111 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:32.605
+!MESSAGE buffering callback sts4.classpath.zklriZql Apartment_Admin false 111
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:32.612
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:32.629
+!MESSAGE classpath=119 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:32.644
+!MESSAGE buffering callback sts4.classpath.zklriZql Apartment_User false 119
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:32.651
+!MESSAGE executing callback sts4.classpath.zklriZql 2 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-18 23:41:32.687
+!MESSAGE executing callback sts4.classpath.zklriZql SUCCESS [done]

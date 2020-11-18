@@ -29,6 +29,7 @@ public class Owner {
 	private String contactNo;
 	private String email;
 	private LocalDate dateOfPurchase;
+	private boolean active;
 
 	@OneToOne(fetch = FetchType.LAZY,
             cascade =  CascadeType.ALL,
