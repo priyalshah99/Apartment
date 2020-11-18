@@ -11,4 +11,5 @@ import com.apartment.models.Income;
 @Repository
 public interface IncomeRepo extends JpaRepository <Income,Long> {
 	List<Income> findByDateBetween(LocalDate startDate, LocalDate endDate);
+	List<Income> findByDate(LocalDate date);
 }

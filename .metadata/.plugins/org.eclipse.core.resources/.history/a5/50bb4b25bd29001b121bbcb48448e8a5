@@ -57,13 +57,7 @@ public class ExpenseServiceImpl implements ExpenseService {
 
 	@Override
 	public List<Expense> filter(String startDate, String endDate) {
-		// TODO Auto-generated method stub
-		return null;
+		return expenseRepo.findByDateBetween(LocalDate.parse(startDate,formatter), LocalDate.parse(endDate,formatter));
 	}
 
-	/*
-	 * @Override public List<Expense> filter(String startDate, String endDate) {
-	 * return expenseRepo.findByDateBetween(LocalDate.parse(startDate,formatter),
-	 * LocalDate.parse(endDate,formatter)); }
-	 */
 }

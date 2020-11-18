@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-//import com.apartment.exception.RecordAlreadyExistException;
+import com.apartment.exception.RecordAlreadyExistException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -72,12 +72,6 @@ public class IncomeServiceImpl implements IncomeService {
 	@Override
 	public List<Income> filter(String startDate, String endDate) {
 		return incomeRepo.findByDateBetween(LocalDate.parse(startDate,formatter), LocalDate.parse(endDate,formatter));
-	}
-
-	@Override
-	public void saveIncome(IncomeRequest incomeRequest) {
-		// TODO Auto-generated method stub
-		
 	}
 	
 }

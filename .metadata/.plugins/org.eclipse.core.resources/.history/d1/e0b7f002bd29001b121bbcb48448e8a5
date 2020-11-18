@@ -71,7 +71,7 @@ public class IncomeController {
 		Double sum = data.stream().mapToDouble(d -> d.getAmount()).sum();
 		TotalResponse response = new TotalResponse();
 		response.setCount(data.size());
-	//	response.setData(data);
+		response.setData(data);
 		response.setSum(sum);
 		return response;
 	}
