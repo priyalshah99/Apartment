@@ -1,5 +1,7 @@
 package com.apartment.service.impl;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,23 +9,47 @@ import org.springframework.stereotype.Service;
 
 import com.apartment.models.Funds;
 import com.apartment.repo.FundsRepo;
+import com.apartment.repo.OwnerRepo;
 import com.apartment.request.FundsRequest;
 import com.apartment.service.FundsService;
+import com.apartment.utils.Constants;
 
 @Service
 public class FundsServiceImpl implements FundsService {
 
+	private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern(Constants.DATE_FORMAT);
+	
 	@Autowired
 	private FundsRepo fundsRepo;
-	//amt,date,reason,mode,owner
+	
+	@Autowired
+	private OwnerRepo ownerRepo;
 
 	@Override
-	public void saveFunds(FundsRequest fundsRequest) {
+	public void saveFunds(FundsRequest request) {
 		
-	}
+		Funds funds=new Funds();
+		funds.setAmount(request.getAmount());
+		funds.setDate(LocalDate.parse(request.getDate(),formatter));
+		funds.setPaymentMode(request.getPaymentMode());
+		funds.setReason(request.getReason());
+		funds.setOwner(ownerRepo.getOne(request.getOwnerId()));
+		
+		fundsRepo.save(funds);
+}
 
 	@Override
-	public void updateFunds(Long id, FundsRequest fundsRequest) {
+	public void updateFunds(Long id, FundsRequest request) {
+		
+		Funds funds = fundsRepo.getOne(id);
+		
+		funds.setAmount(request.getAmount());
+		funds.setDate(LocalDate.parse(request.getDate(),formatter));
+		funds.setPaymentMode(request.getPaymentMode());
+		funds.setReason(request.getReason());
+		funds.setOwner(ownerRepo.getOne(request.getOwnerId()));
+		
+		fundsRepo.save(funds);
 		
 	}
 

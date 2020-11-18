@@ -1,5 +1,6 @@
 package com.apartment.models;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -28,7 +29,7 @@ public class Funds {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long fundsId;
 	private double amount;
-	private Date date;
+	private LocalDate date;
 	private String reason;
 	private String paymentMode;
 	

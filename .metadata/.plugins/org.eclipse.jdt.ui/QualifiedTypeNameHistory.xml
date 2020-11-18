@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.persistence.Column"/>
-<fullyQualifiedTypeName name="javax.persistence.Id"/>
-<fullyQualifiedTypeName name="java.time.LocalDateTime"/>
 <fullyQualifiedTypeName name="java.sql.Timestamp"/>
 <fullyQualifiedTypeName name="org.springframework.transaction.annotation.EnableTransactionManagement"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
@@ -10,9 +7,7 @@
 <fullyQualifiedTypeName name="com.apartment.models.Election"/>
 <fullyQualifiedTypeName name="com.apartment.models.EmployeeDetails"/>
 <fullyQualifiedTypeName name="com.apartment.models.Expense"/>
-<fullyQualifiedTypeName name="com.apartment.models.Funds"/>
 <fullyQualifiedTypeName name="com.apartment.models.Income"/>
-<fullyQualifiedTypeName name="com.apartment.models.Maintenance"/>
 <fullyQualifiedTypeName name="com.apartment.models.Positions"/>
 <fullyQualifiedTypeName name="com.apartment.models.Salary"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
@@ -44,13 +39,11 @@
 <fullyQualifiedTypeName name="com.apartment.models.Flats"/>
 <fullyQualifiedTypeName name="com.apartment.response.FlatResponse"/>
 <fullyQualifiedTypeName name="com.apartment.request.OwnerRequest"/>
-<fullyQualifiedTypeName name="com.apartment.models.Owner"/>
 <fullyQualifiedTypeName name="com.apartment.response.ComplaintResponse"/>
 <fullyQualifiedTypeName name="com.apartment.request.EmployeePositionRequest"/>
 <fullyQualifiedTypeName name="com.apartment.request.EmployeeDetailsRequest"/>
 <fullyQualifiedTypeName name="com.apartment.utils.Constants"/>
 <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
 <fullyQualifiedTypeName name="com.apartment.repo.FlatsRepo"/>
 <fullyQualifiedTypeName name="com.apartment.repo.OwnerRepo"/>
@@ -58,6 +51,13 @@
 <fullyQualifiedTypeName name="com.apartment.repo.EmployeePositionRepo"/>
 <fullyQualifiedTypeName name="com.apartment.response.EmployeePositionResponse"/>
 <fullyQualifiedTypeName name="lombok.Setter"/>
-<fullyQualifiedTypeName name="lombok.Getter"/>
 <fullyQualifiedTypeName name="com.apartment.request.ComplaintsStatusRequest"/>
+<fullyQualifiedTypeName name="com.apartment.models.Owner"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
+<fullyQualifiedTypeName name="com.apartment.response.OwnerResponse"/>
+<fullyQualifiedTypeName name="lombok.Getter"/>
+<fullyQualifiedTypeName name="com.apartment.models.Maintenance"/>
+<fullyQualifiedTypeName name="com.apartment.request.FundsRequest"/>
+<fullyQualifiedTypeName name="com.apartment.models.Funds"/>
 </qualifiedTypeNameHistroy>

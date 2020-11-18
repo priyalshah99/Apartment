@@ -19,6 +19,7 @@ public class ComplaintResponse {
 	private int downVote;	
 	private int status;
 	private String submitter;
+	private Long ownerId;
 	
 	public static ComplaintResponse build(final Complaints complaint) {
 		ComplaintResponse complaintResponse = new ComplaintResponse();
@@ -29,6 +30,7 @@ public class ComplaintResponse {
 		complaintResponse.setDownVote(complaint.getDownVote());
 		complaintResponse.setStatus(complaint.getStatus());
 		complaintResponse.setSubmitter(complaint.getOwner().getName());
+		complaintResponse.setOwnerId(complaint.getOwner().getOwnerId());
 		return complaintResponse;
 	}
 
