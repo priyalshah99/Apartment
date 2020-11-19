@@ -1,7 +1,6 @@
 package com.apartment.models;
 
 
-import java.io.Serializable;
 import java.sql.Timestamp;
 
 import javax.persistence.Entity;

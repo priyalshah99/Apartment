@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.apartment.request.MaintenanceRequest;
 import com.apartment.response.MaintenanceResponse;
-import com.apartment.response.MeetingResponse;
-import com.apartment.response.OwnerResponse;
 import com.apartment.service.MaintenanceService;
 
 @RestController

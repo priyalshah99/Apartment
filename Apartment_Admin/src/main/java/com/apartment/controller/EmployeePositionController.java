@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.apartment.request.EmployeePositionRequest;
 import com.apartment.response.EmployeePositionResponse;
-import com.apartment.response.MeetingResponse;
 import com.apartment.service.EmployeePositionService;
 
 @RestController

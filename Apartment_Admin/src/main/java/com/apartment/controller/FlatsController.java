@@ -14,14 +14,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.apartment.request.FlatsRequest;
-import com.apartment.request.OwnerRequest;
-import com.apartment.response.EmployeeResponse;
 import com.apartment.response.FlatResponse;
 import com.apartment.service.FlatsService;
 
 @RestController
 @RequestMapping("/flats")
-//@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="http://localhost:4200")
 public class FlatsController {
 
 	@Autowired
@@ -57,7 +55,7 @@ public class FlatsController {
 		return flatsService.getOccupiedFlats().stream().map(flt->FlatResponse.build(flt)).collect(Collectors.toList());
 	}
 	
-	@GetMapping("/empty")
+	@GetMapping("/vacant")
 	public List<FlatResponse> fetchEmpty() {
 		return flatsService.getEmptyFlats().stream().map(flt->FlatResponse.build(flt)).collect(Collectors.toList());
 	}

@@ -14,18 +14,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.apartment.request.MeetingRequest;
 import com.apartment.request.OwnerRequest;
-import com.apartment.response.EmployeeResponse;
-import com.apartment.response.FlatResponse;
-import com.apartment.response.IncomeResponse;
-import com.apartment.response.MeetingResponse;
 import com.apartment.response.OwnerResponse;
 import com.apartment.service.OwnerService;
 
 @RestController
 @RequestMapping("/owner")
-//@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="http://localhost:4200")
 public class OwnerController {
 
 	@Autowired

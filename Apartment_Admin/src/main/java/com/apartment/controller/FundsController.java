@@ -15,11 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.apartment.request.FundsRequest;
-import com.apartment.request.MaintenanceRequest;
 import com.apartment.response.FundsResponse;
-import com.apartment.response.MaintenanceResponse;
 import com.apartment.service.FundsService;
-import com.apartment.service.MaintenanceService;
 
 @RestController
 @RequestMapping("/funds")

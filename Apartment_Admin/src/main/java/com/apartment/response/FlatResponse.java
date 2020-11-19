@@ -25,6 +25,6 @@ public class FlatResponse {
     }
     
     public static FlatResponse build(final Flats flat) {
-    	return new FlatResponse(flat.getFlatNo(),flat.getBhk(),flat.getParkingSlot(),flat.getOwner().getName(),flat.isOccupied(),flat.getOwner().getOwnerId());
+    	return new FlatResponse(flat.getFlatNo(),flat.getBhk(),flat.getParkingSlot(),flat.getOwner().getName(),flat.isOccupied(),flat.getOwner().getOwnerId()==0?null:flat.getOwner().getOwnerId());
     }
 }

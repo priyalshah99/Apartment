@@ -19,6 +19,7 @@ public class FlatsRequest {
   	"bhk":2,
   	"parkingSlot":"3A101",
   	
+  	
   }
 */
 /*
