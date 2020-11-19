@@ -13,3 +13,12 @@ public class FundsRequest {
 	private String paymentMode;
 	private Long ownerId;
 }
+
+/*
+ {
+ 	"amount":600,
+ 	"date":"12/10/2020",
+ 	"reason":"Diwali",
+ 	"ownerId":1
+ }
+ */

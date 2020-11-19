@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.apartment.exception.RecordAlreadyExistException;
 import com.apartment.request.IncomeRequest;
 import com.apartment.response.IncomeResponse;
 import com.apartment.service.IncomeService;
@@ -31,7 +32,7 @@ public class IncomeController {
 	private IncomeService incomeService;
 	
 	@PostMapping("/")
-	public String addIncome(@RequestBody IncomeRequest incomeRequest) {
+	public String addIncome(@RequestBody IncomeRequest incomeRequest) throws RecordAlreadyExistException {
 		incomeService.saveIncome(incomeRequest);
 		return "Income entry added successfully";
 	}
@@ -63,16 +64,17 @@ public class IncomeController {
 	}
 	
 	@GetMapping("/filter")
-	public TotalResponse filter(@RequestParam final String startDate, @RequestParam final String endDate) {
-		List<IncomeResponse> data = incomeService.filter(startDate, endDate)
+	public List<IncomeResponse> filter(@RequestParam final String startDate, @RequestParam final String endDate) {
+		return incomeService.filter(startDate, endDate)
 				.stream()
 				.map(inc -> IncomeResponse.build(inc))
 				.collect(Collectors.toList());
-		Double sum = data.stream().mapToDouble(d -> d.getAmount()).sum();
-		TotalResponse response = new TotalResponse();
-		response.setCount(data.size());
-	//	response.setData(data);
-		response.setSum(sum);
-		return response;
-	}
+		/*
+		 * Double sum = data.stream().mapToDouble(d -> d.getAmount()).sum();
+		 * TotalResponse response = new TotalResponse(); response.setCount(data.size());
+		 * // response.setData(data); response.setSum(sum); return response;
+		 */
+		
+		
+		}
 }

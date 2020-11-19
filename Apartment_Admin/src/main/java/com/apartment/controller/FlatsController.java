@@ -21,7 +21,7 @@ import com.apartment.service.FlatsService;
 
 @RestController
 @RequestMapping("/flats")
-@CrossOrigin(origins="http://localhost:4200")
+//@CrossOrigin(origins="http://localhost:4200")
 public class FlatsController {
 
 	@Autowired

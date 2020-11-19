@@ -13,6 +13,7 @@ import lombok.Setter;
 @Setter
 public class FundsResponse {
 	
+	private Long id;
 	private double amount;
 	private String date;
 	private String reason;
@@ -23,6 +24,7 @@ public class FundsResponse {
 	public static FundsResponse build(final Funds funds) {
 		FundsResponse response = new FundsResponse();
 		
+		response.setId(funds.getFundsId());
 		response.setAmount(funds.getAmount());
 		response.setDate(funds.getDate().format(DateTimeFormatter.ofPattern(Constants.DATE_FORMAT)));
 		response.setPaymentMode(funds.getPaymentMode());

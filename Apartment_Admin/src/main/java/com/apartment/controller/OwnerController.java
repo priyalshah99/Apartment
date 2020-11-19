@@ -25,7 +25,7 @@ import com.apartment.service.OwnerService;
 
 @RestController
 @RequestMapping("/owner")
-@CrossOrigin(origins="http://localhost:4200")
+//@CrossOrigin(origins="http://localhost:4200")
 public class OwnerController {
 
 	@Autowired

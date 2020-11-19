@@ -23,9 +23,9 @@ public class IncomeServiceImpl implements IncomeService {
 	private IncomeRepo incomeRepo;
 
 	@Override
-	public void saveIncome(IncomeRequest incomeRequest) {
+	public void saveIncome(IncomeRequest incomeRequest) throws RecordAlreadyExistException {
 		if(!incomeRepo.findByDate(LocalDate.parse(incomeRequest.getDate(),formatter)).isEmpty()) {
-		//	throw new RecordAlreadyExistException("Income record exists for date "+incomeRequest.getDate());
+			throw new RecordAlreadyExistException("Income record exists for date "+incomeRequest.getDate());
 		}
 		Income income = new Income();
 		income.setAmount(incomeRequest.getAmount());

@@ -29,6 +29,7 @@ public class OwnerServiceImpl implements OwnerService{
 		owner.setContactNo(ownerRequest.getContactNo());
 		owner.setEmail(ownerRequest.getEmail());
 		owner.setDateOfPurchase(LocalDate.parse(ownerRequest.getDateOfPurchase(),formatter));
+		owner.setActive(ownerRequest.isActive());
 		
 		ownerRepo.save(owner);
 		
@@ -42,7 +43,7 @@ public class OwnerServiceImpl implements OwnerService{
 		owner.setContactNo(ownerRequest.getContactNo());
 		owner.setEmail(ownerRequest.getEmail());
 		owner.setDateOfPurchase(LocalDate.parse(ownerRequest.getDateOfPurchase(),formatter));
-		
+		owner.setActive(ownerRequest.isActive());
 		ownerRepo.save(owner);
 	}
 	

@@ -28,7 +28,7 @@ public class OwnerResponse {
 	}
 
 	public static OwnerResponse build(final Owner owner) {
-		return new OwnerResponse(owner.getName(), owner.getContactNo(), owner.getEmail(), owner.getDateOfPurchase().format(DateTimeFormatter.ofPattern(Constants.DATE_FORMAT)),owner.isActive());
+		return new OwnerResponse(owner.getName(), owner.getContactNo(), owner.getEmail(), owner.getDateOfPurchase()==null?null:owner.getDateOfPurchase().format(DateTimeFormatter.ofPattern(Constants.DATE_FORMAT)),owner.isActive());
 	}
 	
 	
