@@ -17,7 +17,7 @@ public class FlatsRequest {
   {
   	"flatNo":"A-101",
   	"bhk":2,
-  	"parkingSlot":"3A101"
+  	"parkingSlot":"3A101",
   	
   	
   }

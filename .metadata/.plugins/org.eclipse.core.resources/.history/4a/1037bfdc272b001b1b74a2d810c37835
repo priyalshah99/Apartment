@@ -1,5 +1,6 @@
 package com.apartment.models;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,7 +24,7 @@ public class Flats {
     private int bhk;
     private String parkingSlot;
     
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "ownerId")
     private Owner owner;
 

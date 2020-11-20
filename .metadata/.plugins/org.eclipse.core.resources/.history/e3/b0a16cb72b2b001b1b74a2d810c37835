@@ -5,7 +5,6 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,7 +19,7 @@ import com.apartment.service.FlatsService;
 
 @RestController
 @RequestMapping("/flats")
-@CrossOrigin(origins="http://localhost:4200")
+//@CrossOrigin(origins="http://localhost:4200")
 public class FlatsController {
 
 	@Autowired
@@ -66,10 +65,5 @@ public class FlatsController {
 		return flatsService.getAllFlats().stream().map(flt->FlatResponse.build(flt)).collect(Collectors.toList());
 	}
 	
-	@DeleteMapping("/{id}")
-	public String delete(@PathVariable final int id) {
-		flatsService.deleteFlats(id);
-		return "Flats entry deleted successfully";
-	}
 	
 }

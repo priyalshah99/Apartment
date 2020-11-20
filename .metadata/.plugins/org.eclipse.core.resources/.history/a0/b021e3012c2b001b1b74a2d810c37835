@@ -20,7 +20,7 @@ import com.apartment.service.FlatsService;
 
 @RestController
 @RequestMapping("/flats")
-@CrossOrigin(origins="http://localhost:4200")
+//@CrossOrigin(origins="http://localhost:4200")
 public class FlatsController {
 
 	@Autowired
@@ -67,7 +67,7 @@ public class FlatsController {
 	}
 	
 	@DeleteMapping("/{id}")
-	public String delete(@PathVariable final int id) {
+	public String delete(@PathVariable final Long id) {
 		flatsService.deleteFlats(id);
 		return "Flats entry deleted successfully";
 	}
