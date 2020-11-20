@@ -29,10 +29,10 @@ public class Owner {
 	private LocalDate dateOfPurchase;
 	private boolean active;
 
-	/*
-	 * @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy =
-	 * "owner") private Flats flats;
-	 */
+	@OneToOne(fetch = FetchType.LAZY,
+            cascade =  CascadeType.ALL,
+            mappedBy = "owner")
+    private Flats flats;
 	
 	@OneToOne(fetch = FetchType.LAZY,
             cascade =  CascadeType.ALL,

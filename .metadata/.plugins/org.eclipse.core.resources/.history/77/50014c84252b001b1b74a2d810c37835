@@ -25,7 +25,7 @@ public class Flats {
     private String parkingSlot;
     
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "ownerId")
+    @JoinColumn(name = "ownerId", nullable = true)
     private Owner owner;
 
     
