@@ -36,7 +36,7 @@ public class OwnerServiceImpl implements OwnerService{
 	@Override
 	public void updateOwner(Long id, OwnerRequest ownerRequest) {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(Constants.DATE_FORMAT);
-		Owner owner = ownerRepo.getOne(id);
+		Owner owner = new Owner();
 		owner.setName(ownerRequest.getName());
 		owner.setContactNo(ownerRequest.getContactNo());
 		owner.setEmail(ownerRequest.getEmail());
