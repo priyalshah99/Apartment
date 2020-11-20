@@ -79,10 +79,4 @@ public class OwnerServiceImpl implements OwnerService{
 	public List<Owner> getActiveOwner() {
 		return ownerRepo.findByActiveTrue();
 	}
-
-	@Override
-	public Long findByName(String name) {
-		 return ownerRepo.findFirstByName(name).getOwnerId();
-		
-	}
 }

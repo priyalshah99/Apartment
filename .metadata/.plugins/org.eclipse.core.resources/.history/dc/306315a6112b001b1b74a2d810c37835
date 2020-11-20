@@ -24,7 +24,5 @@ public interface OwnerService {
 	List<Owner> getActiveOwner();
 	
 	List<Owner> getInactiveOwner();
-	
-	Long findByName(final String name);
 
 }

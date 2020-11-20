@@ -79,9 +79,4 @@ public class OwnerController {
 	public List<OwnerResponse> fetchInactive() {
 		return ownerService.getInactiveOwner().stream().map(flt->OwnerResponse.build(flt)).collect(Collectors.toList());
 	}
-	
-	@GetMapping("/byname/{name}")
-	public Long getIdFromName(@PathVariable final String name) {
-		return ownerService.findByName(name);
-	}
 }
