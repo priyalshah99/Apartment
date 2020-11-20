@@ -7,6 +7,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.apartment.models.EmployeeDetails;
+import com.apartment.models.Flats;
 import com.apartment.models.Owner;
 import com.apartment.repo.OwnerRepo;
 import com.apartment.request.OwnerRequest;
@@ -79,8 +81,8 @@ public class OwnerServiceImpl implements OwnerService{
 	}
 
 	@Override
-	public Long findByEmail(String email) {
-		 return ownerRepo.findFirstByEmail(email).getOwnerId();
+	public Long findByName(String name) {
+		 return ownerRepo.findFirstByName(name).getOwnerId();
 		
 	}
 }

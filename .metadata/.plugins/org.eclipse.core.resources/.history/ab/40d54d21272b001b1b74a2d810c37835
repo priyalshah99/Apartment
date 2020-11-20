@@ -80,8 +80,8 @@ public class OwnerController {
 		return ownerService.getInactiveOwner().stream().map(flt->OwnerResponse.build(flt)).collect(Collectors.toList());
 	}
 	
-	@GetMapping("/byemail/{email}")
-	public Long getIdFromEmail(@PathVariable final String email) {
-		return ownerService.findByEmail(email);
+	@GetMapping("/byname/{name}")
+	public Long getIdFromName(@PathVariable final String name) {
+		return ownerService.findByName(name);
 	}
 }
