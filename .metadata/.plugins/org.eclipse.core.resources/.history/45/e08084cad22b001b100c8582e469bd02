@@ -28,7 +28,7 @@ public class Maintenance {
 		private Long maintenanceId;
 		private double amount;
 		private LocalDate date;
-		private int month;
+		private String month;
 		private String paymentMode;
 		
 		@ManyToOne(fetch = FetchType.LAZY, optional = false)

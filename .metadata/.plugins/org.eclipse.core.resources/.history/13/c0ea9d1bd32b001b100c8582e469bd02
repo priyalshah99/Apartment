@@ -27,6 +27,6 @@ spring.datasource.tomcat.validation-query=SELECT 1
 
 # Hibernate ddl auto (create, create-drop, update):
 # with "update" the database schema will be automatically updated accordingly to java entities found in the project
-spring.jpa.hibernate.ddl-auto=create
+spring.jpa.hibernate.ddl-auto=update
 
 spring.datasource.initialization-mode=always

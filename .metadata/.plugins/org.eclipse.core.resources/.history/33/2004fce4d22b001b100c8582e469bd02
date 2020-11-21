@@ -14,7 +14,7 @@ public class MaintenanceResponse {
 	private Long id;
 	private double amount;
 	private String date;
-	private int month;
+	private String month;
 	private String paymentMode;
     private String flatNo;
     

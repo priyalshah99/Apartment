@@ -8,7 +8,7 @@ import lombok.Setter;
 public class MaintenanceRequest {
 	private double amount;
 	private String date;
-	private int month;
+	private String month;
 	private String paymentMode;
     private String flatNo;
 }
@@ -17,7 +17,7 @@ public class MaintenanceRequest {
 {
 	"amount":2000,
 	"date":"25/10/2020",
-	"month":10,
+	"month":"August",
 	"paymentMode":"Cheque",
 	"flatNo":"A-102"
 }
