@@ -82,8 +82,8 @@ public class OwnerServiceImpl implements OwnerService{
 	}
 
 	@Override
-	public Owner findByEmail(String email) {
-		 return ownerRepo.findFirstByEmail(email);
+	public Long findByEmail(String email) {
+		 return ownerRepo.findFirstByEmail(email).getOwnerId();
 		
 	}
 }

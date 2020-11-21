@@ -23,6 +23,6 @@ public interface OwnerService {
 	
 	List<Owner> getInactiveOwner();
 	
-	Owner findByEmail(final String email);
+	Long findByEmail(final String email);
 
 }
