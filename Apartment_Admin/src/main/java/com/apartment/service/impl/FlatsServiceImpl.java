@@ -39,7 +39,7 @@ public class FlatsServiceImpl implements FlatsService {
 		Flats flat = flatsRepo.getOne(id);
 		flat.setOccupied(occupied);
 		if(!occupied) {
-			flat.setOwner(null);
+			flat.setOwner(ownerRepo.getOne((long) 0));
 		}
 		flatsRepo.save(flat);
 		return flat;

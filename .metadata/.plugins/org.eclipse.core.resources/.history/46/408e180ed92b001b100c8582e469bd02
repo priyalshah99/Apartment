@@ -1,0 +1,15 @@
+package com.apartment.request;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class ElectionPositionsRequest {
+
+	private String positionName;
+	
+	/*
+	 * { "positionName":"Secretary" }
+	 */
+}

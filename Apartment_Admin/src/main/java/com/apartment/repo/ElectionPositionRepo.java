@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.apartment.models.ElectionPosition;
 
 @Repository
-public interface ElectionPositionRepo extends JpaRepository <ElectionPosition,Integer> {
+public interface ElectionPositionRepo extends JpaRepository <ElectionPosition,Long> {
 
 }

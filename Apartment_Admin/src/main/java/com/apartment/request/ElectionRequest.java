@@ -7,4 +7,12 @@ import lombok.Setter;
 @Setter
 public class ElectionRequest {
 
+	private String date;
+	private String electionName;
+	
+	/*
+	 * { "date":"12/12/2020",
+	 *  "electionName":"Election2020"
+	 *   }
+	 */
 }
