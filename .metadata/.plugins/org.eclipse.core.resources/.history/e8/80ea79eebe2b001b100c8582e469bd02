@@ -20,7 +20,7 @@ public class OwnerResponse {
 	private String password;
 	private Long id;
 	
-	public OwnerResponse(Long id,String name, String contactNo, String email, String dateOfPurchase, boolean active,String password) {
+	public OwnerResponse(Long id;String name, String contactNo, String email, String dateOfPurchase, boolean active,String password) {
 		super();
 		this.id=id;
 		this.name = name;

@@ -1,0 +1,5 @@
+package com.apartment.controller;
+
+public class ElectionResultController {
+
+}

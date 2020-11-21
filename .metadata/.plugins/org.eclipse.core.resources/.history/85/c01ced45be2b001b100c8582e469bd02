@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.apartment.service.ElectionPositionService;
 
 @RestController
-@RequestMapping("/electionPosition")
+@RequestMapping("/positions")
 @CrossOrigin(origins="http://localhost:4200")
 public class ElectionPositionController {
 	
