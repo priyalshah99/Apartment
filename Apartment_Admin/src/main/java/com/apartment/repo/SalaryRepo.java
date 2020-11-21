@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.apartment.models.Salary;
 
 @Repository
-public interface SalaryRepo extends JpaRepository <Salary,Integer> {
+public interface SalaryRepo extends JpaRepository <Salary,Long> {
 
 }

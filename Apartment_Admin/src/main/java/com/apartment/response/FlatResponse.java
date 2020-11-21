@@ -14,17 +14,19 @@ public class FlatResponse {
     private String ownerName;
     private boolean occupied;
     private Long ownerId;
+    private int flatId;
     
-    public FlatResponse(final String flatNo, final int bhk, final String parkingSlot, final String ownerName, final boolean occupied,final Long ownerId) {
+    public FlatResponse(final int flatId,final String flatNo, final int bhk, final String parkingSlot, final String ownerName, final boolean occupied,final Long ownerId) {
     	this.flatNo = flatNo;
     	this.bhk = bhk;
     	this.parkingSlot = parkingSlot;
     	this.ownerName = ownerName;
     	this.occupied=occupied;
     	this.ownerId=ownerId;
+    	this.flatId=flatId;
     }
     
     public static FlatResponse build(final Flats flat) {
-    	return new FlatResponse(flat.getFlatNo(),flat.getBhk(),flat.getParkingSlot(),flat.getOwner().getName(),flat.isOccupied(),flat.getOwner().getOwnerId()==0?null:flat.getOwner().getOwnerId());
+    	return new FlatResponse(flat.getFlatId(),flat.getFlatNo(),flat.getBhk(),flat.getParkingSlot(),flat.getOwner().getName(),flat.isOccupied(),flat.getOwner().getOwnerId()==0?null:flat.getOwner().getOwnerId());
     }
 }

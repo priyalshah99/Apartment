@@ -7848,3 +7848,86 @@ java.lang.RuntimeException
 	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(Unknown Source)
 	at java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)
 	at java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-21 15:06:42.276
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-21 15:06:42.335
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@4df4f611[org.springframework.tooling.boot.ls:1.17.0.202004200519(id=636)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-21 15:06:42.344
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.eclipse.lsp4e 4 0 2020-11-21 15:06:49.947
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.eclipse.lsp4e.operations.hover.LSPTextHover.getHoverInfo(LSPTextHover.java:108)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:41)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:165)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-21 15:06:53.001
+!MESSAGE Boot LS startup time from start to initialized: 10634ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-21 15:06:53.233
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.YKWWMvslisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-21 15:06:53.253
+!MESSAGE Creating project sorter...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-21 15:06:53.281
+!MESSAGE Creating project sorter... DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-21 15:06:53.301
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-21 15:06:53.314
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-21 15:06:53.329
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-21 15:06:53.344
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-21 15:06:53.360
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.YKWWMvsl => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-21 15:06:53.400
+!MESSAGE classpath=111 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-21 15:06:53.412
+!MESSAGE buffering callback sts4.classpath.YKWWMvsl Apartment_Admin false 111
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-21 15:06:53.424
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-21 15:06:53.452
+!MESSAGE classpath=119 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-21 15:06:53.466
+!MESSAGE buffering callback sts4.classpath.YKWWMvsl Apartment_User false 119
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-21 15:06:53.474
+!MESSAGE executing callback sts4.classpath.YKWWMvsl 2 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-21 15:06:53.520
+!MESSAGE executing callback sts4.classpath.YKWWMvsl SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 4 0 2020-11-21 19:37:12.909
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.CompletableFuture.reportGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.eclipse.lsp4e.operations.hover.LSPTextHover.getHoverInfo(LSPTextHover.java:108)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:41)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:165)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
