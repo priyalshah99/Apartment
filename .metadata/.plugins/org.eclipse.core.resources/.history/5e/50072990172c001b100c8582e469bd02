@@ -81,7 +81,7 @@ public class OwnerController {
 	}
 	
 	@GetMapping("/byemail/{email}")
-	public OwnerResponse getIdFromEmail(@PathVariable final String email) {
+	public Long getIdFromEmail(@PathVariable final String email) {
 		return OwnerResponse.build(ownerService.findByEmail(email));
 	}
 }
