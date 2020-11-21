@@ -3,7 +3,6 @@ package com.apartment.service;
 import java.util.List;
 
 import com.apartment.models.Expense;
-import com.apartment.models.Income;
 import com.apartment.request.ExpenseRequest;
 
 public interface ExpenseService {

@@ -17,18 +17,20 @@ public class OwnerResponse {
 	private String email;
 	private String dateOfPurchase;
 	private boolean active;
+	private String password;
 	
-	public OwnerResponse(String name, String contactNo, String email, String dateOfPurchase, boolean active) {
+	public OwnerResponse(String name, String contactNo, String email, String dateOfPurchase, boolean active,String password) {
 		super();
 		this.name = name;
 		this.contactNo = contactNo;
 		this.email = email;
 		this.dateOfPurchase = dateOfPurchase;
 		this.active=active;
+		this.password=password;
 	}
 
 	public static OwnerResponse build(final Owner owner) {
-		return new OwnerResponse(owner.getName(), owner.getContactNo(), owner.getEmail(), owner.getDateOfPurchase()==null?null:owner.getDateOfPurchase().format(DateTimeFormatter.ofPattern(Constants.DATE_FORMAT)),owner.isActive());
+		return new OwnerResponse(owner.getName(), owner.getContactNo(), owner.getEmail(), owner.getDateOfPurchase()==null?null:owner.getDateOfPurchase().format(DateTimeFormatter.ofPattern(Constants.DATE_FORMAT)),owner.isActive(),owner.getPassword());
 	}
 	
 	

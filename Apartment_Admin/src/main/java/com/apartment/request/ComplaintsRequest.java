@@ -1,7 +1,5 @@
 package com.apartment.request;
 
-import java.util.Date;
-
 import lombok.Getter;
 import lombok.Setter;
 

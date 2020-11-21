@@ -1,5 +1,6 @@
 package com.apartment.models;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Set;
 
@@ -23,18 +24,18 @@ public class Election {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long electionId;
-	private int voteCount;
-	private Date date;
-	private boolean winner;
+	private LocalDate date;
+	private String electionName;
 	
-	@ManyToMany(mappedBy = "elections")
-	Set<Positions> positions;
-	
-	@ManyToMany
-	@JoinTable(
-	  name = "Owner_Election", 
-	  joinColumns = @JoinColumn(name = "electionId"), 
-	  inverseJoinColumns = @JoinColumn(name = "ownerId"))
-	Set<Owner> owner;
-	
+//	private boolean winner;
+//	private int voteCount;
+	/*
+	 * @ManyToMany(mappedBy = "elections") Set<Positions> positions;
+	 * 
+	 * @ManyToMany
+	 * 
+	 * @JoinTable( name = "Owner_Election", joinColumns = @JoinColumn(name =
+	 * "electionId"), inverseJoinColumns = @JoinColumn(name = "ownerId")) Set<Owner>
+	 * owner;
+	 */
 }

@@ -39,6 +39,7 @@ public class MaintenanceServiceImpl implements MaintenanceService {
 
 	@Override
 	public void saveEntry(Long id, MaintenanceRequest request) {
+		
 		Maintenance maintenance = maintenanceRepo.getOne(id);
 		maintenance.setAmount(request.getAmount());
 		maintenance.setDate(LocalDate.parse(request.getDate(),formatter));

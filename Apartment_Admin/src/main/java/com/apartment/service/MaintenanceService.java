@@ -2,7 +2,6 @@ package com.apartment.service;
 
 import java.util.List;
 
-import com.apartment.models.Expense;
 import com.apartment.models.Maintenance;
 import com.apartment.request.MaintenanceRequest;
 

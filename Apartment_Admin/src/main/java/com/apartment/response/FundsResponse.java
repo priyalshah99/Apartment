@@ -3,7 +3,6 @@ package com.apartment.response;
 import java.time.format.DateTimeFormatter;
 
 import com.apartment.models.Funds;
-import com.apartment.models.Maintenance;
 import com.apartment.utils.Constants;
 
 import lombok.Getter;
@@ -20,6 +19,7 @@ public class FundsResponse {
 	private String paymentMode;
 	private Long ownerId;
 	private String ownerName;
+	private String ownerEmail;
 	
 	public static FundsResponse build(final Funds funds) {
 		FundsResponse response = new FundsResponse();
@@ -31,6 +31,7 @@ public class FundsResponse {
 		response.setReason(funds.getReason());
 		response.setOwnerId(funds.getOwner().getOwnerId());
 		response.setOwnerName(funds.getOwner().getName());
+		response.setOwnerEmail(funds.getOwner().getEmail());
 		
     	return response;
 	}

@@ -28,6 +28,7 @@ public class OwnerServiceImpl implements OwnerService{
 		owner.setEmail(ownerRequest.getEmail());
 		owner.setDateOfPurchase(LocalDate.parse(ownerRequest.getDateOfPurchase(),formatter));
 		owner.setActive(ownerRequest.isActive());
+		owner.setPassword(owner.getPassword());
 		
 		ownerRepo.save(owner);
 		
@@ -42,6 +43,8 @@ public class OwnerServiceImpl implements OwnerService{
 		owner.setEmail(ownerRequest.getEmail());
 		owner.setDateOfPurchase(LocalDate.parse(ownerRequest.getDateOfPurchase(),formatter));
 		owner.setActive(ownerRequest.isActive());
+		owner.setPassword(owner.getPassword());
+		
 		ownerRepo.save(owner);
 	}
 	

@@ -12,6 +12,7 @@ public class OwnerRequest {
 	private String email;
 	private String dateOfPurchase;
 	private boolean active;
+	private String password;
 	
 /*
  {
@@ -19,7 +20,8 @@ public class OwnerRequest {
  	"contactNo":"9878787878",
  	"email":"pshah@gmail.com",
  	"dateOfPurchase":"27/12/2019",
- 	"active":true
+ 	"active":true,
+ 	"password":"abc123"
  }
  */
 }

@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.apartment.models.Complaints"/>
-<fullyQualifiedTypeName name="com.apartment.models.Election"/>
-<fullyQualifiedTypeName name="com.apartment.models.EmployeeDetails"/>
-<fullyQualifiedTypeName name="com.apartment.models.Expense"/>
-<fullyQualifiedTypeName name="com.apartment.models.Income"/>
 <fullyQualifiedTypeName name="com.apartment.models.Positions"/>
 <fullyQualifiedTypeName name="com.apartment.models.Salary"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
@@ -54,10 +49,15 @@
 <fullyQualifiedTypeName name="lombok.Getter"/>
 <fullyQualifiedTypeName name="com.apartment.models.Maintenance"/>
 <fullyQualifiedTypeName name="com.apartment.response.MaintenanceResponse"/>
-<fullyQualifiedTypeName name="java.time.LocalDate"/>
 <fullyQualifiedTypeName name="com.apartment.repo.OwnerRepo"/>
 <fullyQualifiedTypeName name="com.apartment.models.Funds"/>
 <fullyQualifiedTypeName name="com.apartment.request.FundsRequest"/>
 <fullyQualifiedTypeName name="com.apartment.response.FundsResponse"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
+<fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
+<fullyQualifiedTypeName name="com.apartment.models.ElectionPosition"/>
+<fullyQualifiedTypeName name="com.apartment.repo.ElectionPositionRepo"/>
+<fullyQualifiedTypeName name="com.apartment.service.ElectionPositionService"/>
 </qualifiedTypeNameHistroy>

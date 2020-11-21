@@ -28,17 +28,13 @@ public class Owner {
 	private String email;
 	private LocalDate dateOfPurchase;
 	private boolean active;
-
+	private String password;
+	
+	
 	/*
 	 * @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy =
-	 * "owner") private Flats flats;
+	 * "owner") private Positions positions;
+	 * 
+	 * @ManyToMany(mappedBy = "owner") Set<Election> election;
 	 */
-	
-	@OneToOne(fetch = FetchType.LAZY,
-            cascade =  CascadeType.ALL,
-            mappedBy = "owner")
-    private Positions positions;
-	
-	@ManyToMany(mappedBy = "owner")
-	Set<Election> election;
 }
