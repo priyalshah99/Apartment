@@ -6,17 +6,29 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="import javax.persistence.Id;"/>
+		<item key="selection" value="salary"/>
 		<list key="findhistory">
+			<item value="Salary"/>
+			<item value="Funds"/>
+			<item value="Position"/>
+			<item value="election"/>
+			<item value="ElectionService"/>
+			<item value="funds"/>
 			<item value="import org.springframework.data.annotation.Id;"/>
 		</list>
 		<list key="replacehistory">
+			<item value="salary"/>
+			<item value="Salary"/>
+			<item value="Result"/>
+			<item value="electionService"/>
+			<item value="election"/>
+			<item value="Election"/>
 			<item value="import javax.persistence.Id;"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1410"/>
-		<item key="DIALOG_Y_ORIGIN" value="407"/>
+		<item key="DIALOG_X_ORIGIN" value="1603"/>
+		<item key="DIALOG_Y_ORIGIN" value="543"/>
 		<item key="DIALOG_WIDTH" value="336"/>
 		<item key="DIALOG_HEIGHT" value="454"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>

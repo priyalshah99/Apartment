@@ -77,12 +77,6 @@ public class FlatsServiceImpl implements FlatsService {
 	public void deleteFlats(int id) {
 		flatsRepo.deleteById(id);
 	}
-
-
-	@Override
-	public Flats getFlats(int id) {
-		return flatsRepo.getOne(id);
-	}
 	
 	
 }

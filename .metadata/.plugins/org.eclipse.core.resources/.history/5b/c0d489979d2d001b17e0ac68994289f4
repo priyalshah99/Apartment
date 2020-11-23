@@ -3,6 +3,7 @@ package com.apartment.service;
 import java.util.List;
 
 import com.apartment.models.Flats;
+import com.apartment.models.Funds;
 import com.apartment.request.FlatsRequest;
 
 public interface FlatsService {

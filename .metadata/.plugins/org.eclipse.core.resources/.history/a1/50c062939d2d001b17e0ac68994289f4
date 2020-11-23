@@ -18,8 +18,6 @@ public interface FlatsService {
 	List<Flats> getOccupiedFlats();
 	
 	List<Flats> getAllFlats();
-	
-	Flats getFlats(final int id);
 
 	void deleteFlats(int id);
 	
