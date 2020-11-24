@@ -68,8 +68,8 @@ public class FlatsController {
 	}
 	
 	@GetMapping("/fetch/{id}")
-	public FlatResponse fetch(@PathVariable final int id) {
-		return FlatResponse.build(flatsService.getFlats(id));
+	public FundsResponse fetch(@PathVariable final int id) {
+		return FundsResponse.build(flatsService.getFlats(id));
 	}
 	
 	@DeleteMapping("/{id}")

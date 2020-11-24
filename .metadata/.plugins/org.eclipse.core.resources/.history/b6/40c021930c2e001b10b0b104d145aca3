@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.apartment.request.FlatsRequest;
 import com.apartment.response.FlatResponse;
-import com.apartment.response.FundsResponse;
 import com.apartment.service.FlatsService;
 
 @RestController
@@ -65,11 +64,6 @@ public class FlatsController {
 	@GetMapping("/")
 	public List<FlatResponse> fetchAll() {
 		return flatsService.getAllFlats().stream().map(flt->FlatResponse.build(flt)).collect(Collectors.toList());
-	}
-	
-	@GetMapping("/fetch/{id}")
-	public FlatResponse fetch(@PathVariable final int id) {
-		return FlatResponse.build(flatsService.getFlats(id));
 	}
 	
 	@DeleteMapping("/{id}")
