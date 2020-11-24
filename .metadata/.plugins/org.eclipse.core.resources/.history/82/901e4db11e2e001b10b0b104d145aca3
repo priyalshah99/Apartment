@@ -15,7 +15,6 @@ public class EmployeeResponse {
 	private String address;
 	private boolean active;
 	private String position;
-	private double posSalary;
 	
 	public static EmployeeResponse build(EmployeeDetails employee) {
 		EmployeeResponse empResponse = new EmployeeResponse();
@@ -25,7 +24,6 @@ public class EmployeeResponse {
 		empResponse.setAddress(employee.getAddress());
 		empResponse.setActive(employee.isActive());
 		empResponse.setPosition(employee.getEmployeePosition().getPositionName());
-		empResponse.setPosSalary(employee.getEmployeePosition().getSalary());
 		return empResponse;
 	}
 }
