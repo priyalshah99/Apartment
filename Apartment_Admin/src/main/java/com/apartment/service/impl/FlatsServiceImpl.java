@@ -83,6 +83,9 @@ public class FlatsServiceImpl implements FlatsService {
 	public Flats getFlats(int id) {
 		return flatsRepo.getOne(id);
 	}
+
+
+	
 	
 	
 }

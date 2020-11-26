@@ -72,6 +72,8 @@ public class FlatsController {
 		return FlatResponse.build(flatsService.getFlats(id));
 	}
 	
+	
+	
 	@DeleteMapping("/{id}")
 	public String delete(@PathVariable final int id) {
 		flatsService.deleteFlats(id);

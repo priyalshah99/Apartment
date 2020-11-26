@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.apartment.repo.ExpenseRepo"/>
-<fullyQualifiedTypeName name="com.apartment.service.FlatsService"/>
 <fullyQualifiedTypeName name="com.apartment.service.FundsService"/>
 <fullyQualifiedTypeName name="com.apartment.repo.FundsRepo"/>
 <fullyQualifiedTypeName name="com.apartment.service.IncomeService"/>
@@ -15,7 +13,6 @@
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
 <fullyQualifiedTypeName name="com.apartment.request.FlatsRequest"/>
-<fullyQualifiedTypeName name="com.apartment.models.Flats"/>
 <fullyQualifiedTypeName name="com.apartment.request.OwnerRequest"/>
 <fullyQualifiedTypeName name="com.apartment.response.ComplaintResponse"/>
 <fullyQualifiedTypeName name="com.apartment.request.EmployeePositionRequest"/>
@@ -28,8 +25,6 @@
 <fullyQualifiedTypeName name="com.apartment.repo.EmployeePositionRepo"/>
 <fullyQualifiedTypeName name="com.apartment.response.EmployeePositionResponse"/>
 <fullyQualifiedTypeName name="com.apartment.request.ComplaintsStatusRequest"/>
-<fullyQualifiedTypeName name="com.apartment.models.Owner"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.apartment.response.OwnerResponse"/>
 <fullyQualifiedTypeName name="com.apartment.models.Maintenance"/>
 <fullyQualifiedTypeName name="com.apartment.response.MaintenanceResponse"/>
@@ -53,11 +48,16 @@
 <fullyQualifiedTypeName name="com.apartment.repo.ElectionPositionRepo"/>
 <fullyQualifiedTypeName name="com.apartment.repo.OwnerRepo"/>
 <fullyQualifiedTypeName name="java.time.LocalDate"/>
-<fullyQualifiedTypeName name="lombok.Getter"/>
-<fullyQualifiedTypeName name="lombok.Setter"/>
 <fullyQualifiedTypeName name="com.apartment.models.Salary"/>
 <fullyQualifiedTypeName name="com.apartment.repo.EmployeeDetailsRepo"/>
 <fullyQualifiedTypeName name="com.apartment.service.SalaryService"/>
 <fullyQualifiedTypeName name="com.apartment.request.SalaryRequest"/>
 <fullyQualifiedTypeName name="com.apartment.response.SalaryResponse"/>
+<fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="lombok.Getter"/>
+<fullyQualifiedTypeName name="lombok.Setter"/>
+<fullyQualifiedTypeName name="com.apartment.models.Flats"/>
+<fullyQualifiedTypeName name="com.apartment.response.NonpaidMaintainenaceResponse"/>
+<fullyQualifiedTypeName name="com.apartment.models.Owner"/>
 </qualifiedTypeNameHistroy>

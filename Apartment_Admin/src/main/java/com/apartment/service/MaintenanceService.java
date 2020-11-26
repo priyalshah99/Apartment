@@ -2,6 +2,7 @@ package com.apartment.service;
 
 import java.util.List;
 
+import com.apartment.models.Flats;
 import com.apartment.models.Maintenance;
 import com.apartment.request.MaintenanceRequest;
 
@@ -16,5 +17,7 @@ public interface MaintenanceService {
 	Maintenance fetch(final Long id);
 	
 	List<Maintenance> fetchAll();
+	
+	List<Flats> fetchFlatsWithMaintenanceNotPaid();
 	
 }

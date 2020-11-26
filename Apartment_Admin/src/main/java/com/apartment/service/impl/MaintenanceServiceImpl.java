@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.apartment.models.Flats;
 import com.apartment.models.Maintenance;
 import com.apartment.repo.FlatsRepo;
 import com.apartment.repo.MaintenanceRepo;
@@ -65,5 +66,12 @@ public class MaintenanceServiceImpl implements MaintenanceService {
 	public List<Maintenance> fetchAll() {
 		
 		return maintenanceRepo.findAll();
+	}
+	
+	
+	@Override
+	public List<Flats> fetchFlatsWithMaintenanceNotPaid() {
+		int month = LocalDate.now().getMonth().getValue();
+		return maintenanceRepo.findFlatsWithNoMaintenancePaid(month);
 	}
 }
