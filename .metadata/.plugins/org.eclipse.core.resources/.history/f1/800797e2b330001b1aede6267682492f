@@ -1,8 +1,6 @@
 package com.apartment.service.impl;
 
-import java.sql.Timestamp;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
@@ -73,15 +71,5 @@ public class ElectionServiceImpl implements ElectionService {
 	@Override
 	public void deleteElection(Long id) {
 		electionRepo.deleteById(id);
-	}
-	
-	@Override
-	public List<Election> fetchElection(final String state) {
-		if(state.equalsIgnoreCase(Constants.UPCOMING)) {
-			return electionRepo.findByDateAfter(LocalDate.now());
-		} else if(state.equalsIgnoreCase(Constants.COMPLETED)) {
-			return electionRepo.findByEndDateBefore(LocalDate.now());
-		}
-		return electionRepo.findAll();
 	}
 }

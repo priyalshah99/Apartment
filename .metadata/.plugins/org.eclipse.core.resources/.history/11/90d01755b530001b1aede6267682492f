@@ -78,9 +78,9 @@ public class ElectionServiceImpl implements ElectionService {
 	@Override
 	public List<Election> fetchElection(final String state) {
 		if(state.equalsIgnoreCase(Constants.UPCOMING)) {
-			return electionRepo.findByDateAfter(LocalDate.now());
+			return electionRepo.findByDateAfter(LocalDate.valueOf(LocalDate.now()));
 		} else if(state.equalsIgnoreCase(Constants.COMPLETED)) {
-			return electionRepo.findByEndDateBefore(LocalDate.now());
+			return electionRepo.findByEndDateBefore(LocalDate.valueOf(LocalDate.now()));
 		}
 		return electionRepo.findAll();
 	}

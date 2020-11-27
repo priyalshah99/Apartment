@@ -17,5 +17,5 @@ void saveElectionResult(final ElectionResultRequest electionResultRequest);
 	
 	void deleteElectionResult(final Long id);
 	
-	List<ElectionResult> getAllByElection(Long id);
+	List<ElectionResult> getAllByElection();
 }

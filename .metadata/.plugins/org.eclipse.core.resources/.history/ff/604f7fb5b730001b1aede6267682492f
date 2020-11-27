@@ -58,14 +58,4 @@ public class ElectionResultController {
 				.collect(Collectors.toList());
 	}
 	
-	@GetMapping("/fetchbyelection/{id}")
-	public List<ElectionResultResponse> fetchByElection(@PathVariable final Long id) {
-	
-		return electionResultService.getAllByElection(id)
-				.stream()
-				.map(inc -> ElectionResultResponse.build(inc))
-				.collect(Collectors.toList());
-	
-	}
-	
 }

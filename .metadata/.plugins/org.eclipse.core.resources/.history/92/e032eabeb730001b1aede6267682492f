@@ -65,7 +65,7 @@ public class ElectionResultController {
 				.stream()
 				.map(inc -> ElectionResultResponse.build(inc))
 				.collect(Collectors.toList());
-	
+	}
 	}
 	
 }

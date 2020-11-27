@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.apartment.models.Election;
 import com.apartment.models.ElectionResult;
 import com.apartment.repo.ElectionPositionRepo;
 import com.apartment.repo.ElectionRepo;
@@ -72,12 +71,6 @@ public class ElectionResultServiceImpl implements ElectionResultService{
 	@Override
 	public void deleteElectionResult(Long id) {
 		electionResultRepo.deleteById(id);
-	}
-
-	@Override
-	public List<ElectionResult> getAllByElection(Long id) {
-		Election e=electionRepo.getOne(id);
-		return electionResultRepo.findByElection(e);
 	}
 	
 	
