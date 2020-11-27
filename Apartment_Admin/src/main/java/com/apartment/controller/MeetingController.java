@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.apartment.models.Meetings;
 import com.apartment.request.MeetingRequest;
+import com.apartment.response.ElectionResponse;
 import com.apartment.response.MeetingResponse;
 import com.apartment.service.MeetingService;
 
@@ -42,6 +43,18 @@ public class MeetingController {
 		meetingService.updateMeeting(id, request);
 		return "Meeting updated successfully";
 	}
+	
+	@PutMapping("/{id}/active")
+	public MeetingResponse activeMeeting(@PathVariable final long id) {
+		return MeetingResponse.build(meetingService.setActive(id, true));
+		
+	}
+	
+	@PutMapping("/{id}/inactive")
+	public MeetingResponse inactiveMeeting(@PathVariable final long id) {
+		return MeetingResponse.build(meetingService.setActive(id, false));
+
+	}	
 	
 	@DeleteMapping("/{id}")
 	public String deleteMeeting(@PathVariable final Long id) {

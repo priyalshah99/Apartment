@@ -2,6 +2,7 @@ package com.apartment.service;
 
 import java.util.List;
 
+import com.apartment.models.ElectionPosition;
 import com.apartment.models.Meetings;
 import com.apartment.request.MeetingRequest;
 
@@ -16,4 +17,6 @@ public interface MeetingService {
 	List<Meetings> fetchMeetings(final String state);
 	
 	Meetings fetchMeeting(final Long id);
+	
+	Meetings setActive(final Long id, final boolean active);
 }

@@ -20,6 +20,8 @@ public class Election {
 	private Long electionId;
 	private LocalDate date;
 	private String electionName;
+	private boolean active;
+	private LocalDate endDate;
 	
 //	private boolean winner;
 //	private int voteCount;

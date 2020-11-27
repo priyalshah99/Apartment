@@ -17,6 +17,7 @@ public class MaintenanceResponse {
 	private int month;
 	private String paymentMode;
     private String flatNo;
+    private int bhk;
     
     public static MaintenanceResponse build(final Maintenance maintenance) {
     	MaintenanceResponse response = new MaintenanceResponse();
@@ -26,6 +27,8 @@ public class MaintenanceResponse {
     	response.setMonth(maintenance.getMonth());
     	response.setPaymentMode(maintenance.getPaymentMode());
     	response.setFlatNo(maintenance.getFlat().getFlatNo());
+    	response.setBhk(maintenance.getFlat().getBhk());
+    	
     	return response;
     }
 }

@@ -8,8 +8,10 @@ import lombok.Setter;
 public class ElectionPositionRequest {
 
 	private String positionName;
+	private boolean active;
 	
 	/*
-	 * { "positionName":"Secretary" }
+	 * { "positionName":"Secretary",
+	 * "active":"true" }
 	 */
 }

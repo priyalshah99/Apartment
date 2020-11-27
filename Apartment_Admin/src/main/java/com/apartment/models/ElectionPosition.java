@@ -17,6 +17,7 @@ public class ElectionPosition {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long positionId;
 	private String positionName;
+	private boolean active;
 	
 	/*
 	 * @OneToOne(fetch = FetchType.LAZY, optional = false)

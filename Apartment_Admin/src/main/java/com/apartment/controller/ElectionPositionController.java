@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.apartment.request.ElectionPositionRequest;
 import com.apartment.response.ElectionPositionResponse;
+import com.apartment.response.ElectionResponse;
 import com.apartment.service.ElectionPositionService;
 
 @RestController
@@ -37,6 +38,18 @@ public class ElectionPositionController {
 		electionPositionService.updateElectionPosition(id, request);
 		return "ElectionPosition entry updated successfully";
 	}
+	
+	@PutMapping("/{id}/active")
+	public ElectionPositionResponse activeElectionPosition(@PathVariable final long id) {
+		return ElectionPositionResponse.build(electionPositionService.setActive(id, true));
+		
+	}
+	
+	@PutMapping("/{id}/inactive")
+	public ElectionPositionResponse inactivePositionElection(@PathVariable final long id) {
+		return ElectionPositionResponse.build(electionPositionService.setActive(id, false));
+
+	}	
 	
 	@DeleteMapping("/{id}")
 	public String delete(@PathVariable final Long id) {

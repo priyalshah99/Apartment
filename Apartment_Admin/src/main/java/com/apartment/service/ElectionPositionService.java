@@ -3,6 +3,7 @@ package com.apartment.service;
 import java.util.List;
 
 import com.apartment.models.ElectionPosition;
+import com.apartment.models.Owner;
 import com.apartment.request.ElectionPositionRequest;
 
 public interface ElectionPositionService {
@@ -16,4 +17,6 @@ public interface ElectionPositionService {
 	ElectionPosition getElectionPosition(final Long id);
 	
 	void deleteElectionPosition(final Long id);
+	
+	ElectionPosition setActive(final Long id, final boolean active);
 }

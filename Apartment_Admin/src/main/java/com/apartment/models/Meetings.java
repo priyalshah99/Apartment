@@ -25,5 +25,6 @@ public class Meetings {
 	private String topic;
 	private String agenda;
 	private String minutesOfMeeting;
+	private boolean active;
 
 }

@@ -11,6 +11,7 @@ public class ElectionPositionResponse {
 
 	private String name;
 	private Long id;
+	private boolean active;
 	
 	public static ElectionPositionResponse build(final ElectionPosition electionPosition) {
 	
@@ -18,6 +19,7 @@ public class ElectionPositionResponse {
 		
 		response.setId(electionPosition.getPositionId());
 		response.setName(electionPosition.getPositionName());
+		response.setActive(electionPosition.isActive());
 		
 		
 		return(response);

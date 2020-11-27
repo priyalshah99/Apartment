@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.apartment.models.Election;
+import com.apartment.models.Meetings;
 import com.apartment.repo.ElectionRepo;
 import com.apartment.request.ElectionRequest;
 import com.apartment.service.ElectionService;
@@ -28,7 +29,9 @@ public class ElectionServiceImpl implements ElectionService {
 		Election election=new Election();
 		
 		election.setElectionName(electionRequest.getElectionName());		
-		election.setDate(LocalDate.parse(electionRequest.getDate(),formatter));		
+		election.setDate(LocalDate.parse(electionRequest.getDate(),formatter));	
+		election.setActive(electionRequest.isActive());
+		election.setEndDate(LocalDate.parse(electionRequest.getEndDate(),formatter));	
 		
 		electionRepo.save(election);
 		
@@ -41,8 +44,18 @@ public class ElectionServiceImpl implements ElectionService {
 		
 		election.setElectionName(electionRequest.getElectionName());		
 		election.setDate(LocalDate.parse(electionRequest.getDate(),formatter));		
+		election.setActive(electionRequest.isActive());
+		election.setEndDate(LocalDate.parse(electionRequest.getEndDate(),formatter));	
 		
 		electionRepo.save(election);
+	}
+	
+	@Override
+	public Election setActive(Long id, boolean active) {
+		Election election = electionRepo.getOne(id);
+		election.setActive(active);
+		electionRepo.save(election);
+		return election;
 	}
 
 	@Override

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.apartment.models.ElectionPosition;
+import com.apartment.models.Meetings;
 import com.apartment.repo.ElectionPositionRepo;
 import com.apartment.request.ElectionPositionRequest;
 import com.apartment.service.ElectionPositionService;
@@ -26,6 +27,7 @@ public class ElectionPositionServiceImpl implements ElectionPositionService {
 		ElectionPosition electionPosition=new ElectionPosition();
 		
 		electionPosition.setPositionName(electionPositionRequest.getPositionName());		
+		electionPosition.setActive(electionPositionRequest.isActive());
 		
 		electionPositionRepo.save(electionPosition);
 		
@@ -36,9 +38,18 @@ public class ElectionPositionServiceImpl implements ElectionPositionService {
 
 		ElectionPosition electionPosition=electionPositionRepo.getOne(id);
 		
-		electionPosition.setPositionName(electionPositionRequest.getPositionName());		
+		electionPosition.setPositionName(electionPositionRequest.getPositionName());
+		electionPosition.setActive(electionPositionRequest.isActive());
 		
 		electionPositionRepo.save(electionPosition);
+	}
+	
+	@Override
+	public ElectionPosition setActive(Long id, boolean active) {
+		ElectionPosition electionPosition = electionPositionRepo.getOne(id);
+		electionPosition.setActive(active);
+		electionPositionRepo.save(electionPosition);
+		return electionPosition;
 	}
 
 	@Override

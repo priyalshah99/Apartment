@@ -11,6 +11,7 @@ public class MeetingRequest {
 	private String topic;
 	private String agenda;
 	private String minutesOfMeeting;
+	private boolean active;
 }
 /*
  {
@@ -18,6 +19,7 @@ public class MeetingRequest {
 	"endTime" : "13/10/2020 04:00:00",
 	"topic" : "Annual Meeting 2020",
 	"agenda" : "Society renovation, Parking issues",
-	"minutesOfMeeting" : "none"
+	"minutesOfMeeting" : "none",
+	"active":true
 }
 */

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.apartment.models.Meetings;
+import com.apartment.models.Owner;
 import com.apartment.repo.MeetingRepo;
 import com.apartment.request.MeetingRequest;
 import com.apartment.service.MeetingService;
@@ -29,6 +30,7 @@ public class MeetingServiceImpl implements MeetingService {
 		meeting.setStartTime(Timestamp.valueOf(LocalDateTime.parse(meetingRequest.getStartTime(),formatter)));
 		meeting.setEndTime(Timestamp.valueOf(LocalDateTime.parse(meetingRequest.getEndTime(),formatter)));
 		meeting.setMinutesOfMeeting(meetingRequest.getMinutesOfMeeting());
+		meeting.setActive(meetingRequest.isActive());
 		
 		meetingRepo.save(meeting);
 	}
@@ -57,9 +59,18 @@ public class MeetingServiceImpl implements MeetingService {
 		meeting.setStartTime(Timestamp.valueOf(LocalDateTime.parse(meetingRequest.getStartTime(),formatter)));
 		meeting.setEndTime(Timestamp.valueOf(LocalDateTime.parse(meetingRequest.getEndTime(),formatter)));
 		meeting.setMinutesOfMeeting(meetingRequest.getMinutesOfMeeting());
+		meeting.setActive(meetingRequest.isActive());
 		
 		meetingRepo.save(meeting);
 		
+	}
+	
+	@Override
+	public Meetings setActive(Long id, boolean active) {
+		Meetings meet = meetingRepo.getOne(id);
+		meet.setActive(active);
+		meetingRepo.save(meet);
+		return meet;
 	}
 
 	@Override
