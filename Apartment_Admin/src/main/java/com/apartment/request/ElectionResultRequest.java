@@ -8,7 +8,7 @@ import lombok.Setter;
 public class ElectionResultRequest {
 
 	private int voteCount;
-	private boolean winner;	
+	//private boolean winner;	
     private Long ownerId;
 	private Long PositionId;	
     private Long electionId;
@@ -18,8 +18,8 @@ public class ElectionResultRequest {
 	 * { "ownerId":2,
 	 *  "positionId":1,
 	 *   "electionId":1,
-	 *    "voteCount":40,
-	 *     "winner":false
+	 *    "voteCount":40
+	 *     
 	 * }
 	 */
 }

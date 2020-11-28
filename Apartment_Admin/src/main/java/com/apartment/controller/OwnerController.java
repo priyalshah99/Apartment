@@ -57,7 +57,7 @@ public class OwnerController {
 	}
 	
 	@GetMapping("/{id}")
-	public OwnerResponse getMeeting(@PathVariable final Long id) {
+	public OwnerResponse getOwner(@PathVariable final Long id) {
 		return OwnerResponse.build(ownerService.fetchOwner(id));
 	}
 	

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.apartment.request.FlatsRequest;
+import com.apartment.response.ElectionResultResponse;
 import com.apartment.response.FlatResponse;
 import com.apartment.response.FundsResponse;
 import com.apartment.service.FlatsService;
@@ -80,4 +81,13 @@ public class FlatsController {
 		return "Flats entry deleted successfully";
 	}
 	
+	@GetMapping("/fetchbyowner/{id}")
+	public List<FlatResponse> fetchByOwner(@PathVariable final Long id) {
+	
+		return flatsService.getAllByOwner(id)
+				.stream()
+				.map(inc -> FlatResponse.build(inc))
+				.collect(Collectors.toList());
+	
+	}
 }

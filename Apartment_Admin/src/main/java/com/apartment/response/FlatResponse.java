@@ -15,6 +15,7 @@ public class FlatResponse {
     private boolean occupied;
     private Long ownerId;
     private int flatId;
+   
     
     public FlatResponse(final int flatId,final String flatNo, final int bhk, final String parkingSlot, final String ownerName, final boolean occupied,final Long ownerId) {
     	this.flatNo = flatNo;

@@ -68,4 +68,9 @@ public class ElectionResultController {
 	
 	}
 	
+	@PutMapping("/{id}/upvote/")
+	public int upvote(@PathVariable final long id) {
+		return electionResultService.upvote(id);
+	}
+	
 }

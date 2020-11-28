@@ -18,4 +18,6 @@ void saveElectionResult(final ElectionResultRequest electionResultRequest);
 	void deleteElectionResult(final Long id);
 	
 	List<ElectionResult> getAllByElection(Long id);
+	
+	public int upvote(Long id);
 }

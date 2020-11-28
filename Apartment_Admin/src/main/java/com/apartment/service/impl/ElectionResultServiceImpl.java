@@ -39,7 +39,7 @@ public class ElectionResultServiceImpl implements ElectionResultService{
 		electionResult.setElectionPosition(electionPositionRepo.getOne(electionResultRequest.getPositionId()));
 		
 		electionResult.setVoteCount(electionResultRequest.getVoteCount());
-		electionResult.setWinner(electionResultRequest.isWinner());
+	//	electionResult.setWinner(electionResultRequest.isWinner());
 		
 		electionResultRepo.save(electionResult);
 	}
@@ -54,7 +54,7 @@ public class ElectionResultServiceImpl implements ElectionResultService{
 		electionResult.setElectionPosition(electionPositionRepo.getOne(electionResultRequest.getPositionId()));
 		
 		electionResult.setVoteCount(electionResultRequest.getVoteCount());
-		electionResult.setWinner(electionResultRequest.isWinner());
+	//	electionResult.setWinner(electionResultRequest.isWinner());
 		
 		electionResultRepo.save(electionResult);
 	}
@@ -78,6 +78,14 @@ public class ElectionResultServiceImpl implements ElectionResultService{
 	public List<ElectionResult> getAllByElection(Long id) {
 		Election e=electionRepo.getOne(id);
 		return electionResultRepo.findByElection(e);
+	}
+	
+	@Override
+	public int upvote(Long id) {
+		ElectionResult er = electionResultRepo.getOne(id);
+		er.setVoteCount(er.getVoteCount()+1);
+		electionResultRepo.save(er);
+		return er.getVoteCount();
 	}
 	
 	

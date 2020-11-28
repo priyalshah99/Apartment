@@ -23,5 +23,5 @@ public interface FlatsService {
 
 	void deleteFlats(int id);
 	
-
+	List<Flats> getAllByOwner(Long id);
 }

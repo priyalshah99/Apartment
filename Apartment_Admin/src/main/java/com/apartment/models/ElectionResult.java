@@ -19,7 +19,7 @@ public class ElectionResult {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long electionResultId;
 	private int voteCount;
-	private boolean winner;
+	
 	
 	@ManyToOne
     @JoinColumn(name = "ownerId")

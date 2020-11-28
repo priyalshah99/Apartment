@@ -24,7 +24,7 @@ public class ElectionResultResponse {
 	private String electionDate;
 	
 	private int voteCount;
-	private boolean winner;
+//	private boolean winner;
 	
 	public static ElectionResultResponse build(final ElectionResult electionResult) {
 		ElectionResultResponse response = new ElectionResultResponse();
@@ -40,7 +40,7 @@ public class ElectionResultResponse {
 		response.setElectionDate(electionResult.getElection().getDate().format(DateTimeFormatter.ofPattern(Constants.DATE_FORMAT)));
 				
 		response.setVoteCount(electionResult.getVoteCount());
-		response.setWinner(electionResult.isWinner());
+	//	response.setWinner(electionResult.isWinner());
 		return response;
 	}
 	

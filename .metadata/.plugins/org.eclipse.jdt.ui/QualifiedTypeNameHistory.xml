@@ -37,7 +37,6 @@
 <fullyQualifiedTypeName name="com.apartment.service.ElectionPositionService"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 <fullyQualifiedTypeName name="com.apartment.repo.ElectionResultRepo"/>
-<fullyQualifiedTypeName name="com.apartment.models.Election"/>
 <fullyQualifiedTypeName name="com.apartment.service.ElectionService"/>
 <fullyQualifiedTypeName name="com.apartment.models.ElectionPosition"/>
 <fullyQualifiedTypeName name="com.apartment.request.ElectionPositionRequest"/>
@@ -47,17 +46,18 @@
 <fullyQualifiedTypeName name="com.apartment.service.ElectionResultService"/>
 <fullyQualifiedTypeName name="com.apartment.repo.ElectionPositionRepo"/>
 <fullyQualifiedTypeName name="com.apartment.repo.OwnerRepo"/>
-<fullyQualifiedTypeName name="java.time.LocalDate"/>
 <fullyQualifiedTypeName name="com.apartment.models.Salary"/>
 <fullyQualifiedTypeName name="com.apartment.repo.EmployeeDetailsRepo"/>
 <fullyQualifiedTypeName name="com.apartment.service.SalaryService"/>
 <fullyQualifiedTypeName name="com.apartment.request.SalaryRequest"/>
 <fullyQualifiedTypeName name="com.apartment.response.SalaryResponse"/>
 <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="lombok.Getter"/>
 <fullyQualifiedTypeName name="lombok.Setter"/>
 <fullyQualifiedTypeName name="com.apartment.models.Flats"/>
 <fullyQualifiedTypeName name="com.apartment.response.NonpaidMaintainenaceResponse"/>
 <fullyQualifiedTypeName name="com.apartment.models.Owner"/>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.apartment.models.Election"/>
 </qualifiedTypeNameHistroy>
