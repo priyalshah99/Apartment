@@ -86,4 +86,13 @@ public class OwnerServiceImpl implements OwnerService{
 		 return ownerRepo.findFirstByEmail(email);
 		
 	}
+
+	@Override
+	public Owner checkByEmailAndPassword(String email, String passwd) {
+		Owner owner=ownerRepo.findFirstByEmail(email);
+		if(owner!=null && passwd.equals(owner.getPassword()))
+			return owner;
+		else 
+			return null;
+	}
 }

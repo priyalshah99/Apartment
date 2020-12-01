@@ -2,7 +2,6 @@ package com.apartment.service;
 
 import java.util.List;
 
-import com.apartment.models.ElectionPosition;
 import com.apartment.models.Meetings;
 import com.apartment.request.MeetingRequest;
 

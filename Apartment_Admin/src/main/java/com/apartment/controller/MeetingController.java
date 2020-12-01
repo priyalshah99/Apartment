@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.apartment.models.Meetings;
 import com.apartment.request.MeetingRequest;
-import com.apartment.response.ElectionResponse;
 import com.apartment.response.MeetingResponse;
 import com.apartment.service.MeetingService;
 

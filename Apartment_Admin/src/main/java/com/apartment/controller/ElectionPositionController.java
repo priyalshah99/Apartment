@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.apartment.request.ElectionPositionRequest;
 import com.apartment.response.ElectionPositionResponse;
-import com.apartment.response.ElectionResponse;
 import com.apartment.service.ElectionPositionService;
 
 @RestController

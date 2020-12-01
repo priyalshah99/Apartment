@@ -56,8 +56,8 @@
 <fullyQualifiedTypeName name="lombok.Setter"/>
 <fullyQualifiedTypeName name="com.apartment.models.Flats"/>
 <fullyQualifiedTypeName name="com.apartment.response.NonpaidMaintainenaceResponse"/>
-<fullyQualifiedTypeName name="com.apartment.models.Owner"/>
 <fullyQualifiedTypeName name="java.time.LocalDate"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.apartment.models.Election"/>
+<fullyQualifiedTypeName name="com.apartment.models.Owner"/>
 </qualifiedTypeNameHistroy>

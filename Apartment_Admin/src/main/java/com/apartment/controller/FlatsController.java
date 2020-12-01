@@ -15,9 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.apartment.request.FlatsRequest;
-import com.apartment.response.ElectionResultResponse;
 import com.apartment.response.FlatResponse;
-import com.apartment.response.FundsResponse;
 import com.apartment.service.FlatsService;
 
 @RestController

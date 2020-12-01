@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.apartment.models.Owner;
 import com.apartment.request.OwnerRequest;
 import com.apartment.response.OwnerResponse;
 import com.apartment.service.OwnerService;
@@ -84,4 +85,11 @@ public class OwnerController {
 	public OwnerResponse getIdFromEmail(@PathVariable final String email) {
 		return OwnerResponse.build(ownerService.findByEmail(email));
 	}
+	
+	@GetMapping("/login/{email}/{password}")
+	public OwnerResponse checkEmailAndPassword(@PathVariable final String email,@PathVariable final String password) {
+		Owner owner = ownerService.checkByEmailAndPassword(email,password);
+		return owner==null?null:OwnerResponse.build(owner);
+	}
+	
 }

@@ -5,8 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.apartment.models.Election;
-import com.apartment.models.ElectionResult;
 import com.apartment.models.Flats;
 import com.apartment.models.Owner;
 import com.apartment.repo.FlatsRepo;

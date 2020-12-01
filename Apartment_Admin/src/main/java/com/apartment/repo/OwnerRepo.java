@@ -14,7 +14,7 @@ public interface OwnerRepo extends JpaRepository <Owner,Long> {
 
 	List<Owner> findByActiveTrue();
 
-	Owner findFirstByEmail(String email);
+	Owner findFirstByEmail(String email);	
 	
 	
 

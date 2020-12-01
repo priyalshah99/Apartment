@@ -1,8 +1,6 @@
 package com.apartment.service.impl;
 
-import java.sql.Timestamp;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
@@ -10,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.apartment.models.Election;
-import com.apartment.models.Meetings;
 import com.apartment.repo.ElectionRepo;
 import com.apartment.request.ElectionRequest;
 import com.apartment.service.ElectionService;

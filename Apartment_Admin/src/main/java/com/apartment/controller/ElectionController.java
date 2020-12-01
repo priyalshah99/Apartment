@@ -15,10 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.apartment.models.Election;
-import com.apartment.models.Meetings;
 import com.apartment.request.ElectionRequest;
 import com.apartment.response.ElectionResponse;
-import com.apartment.response.OwnerResponse;
 import com.apartment.service.ElectionService;
 
 @RestController

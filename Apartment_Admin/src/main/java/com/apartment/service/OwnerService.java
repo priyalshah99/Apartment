@@ -24,5 +24,7 @@ public interface OwnerService {
 	List<Owner> getInactiveOwner();
 	
 	Owner findByEmail(final String email);
+	
+	Owner checkByEmailAndPassword(final String email,final String password);
 
 }

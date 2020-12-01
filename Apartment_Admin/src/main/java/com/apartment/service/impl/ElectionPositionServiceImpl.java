@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.apartment.models.ElectionPosition;
-import com.apartment.models.Meetings;
 import com.apartment.repo.ElectionPositionRepo;
 import com.apartment.request.ElectionPositionRequest;
 import com.apartment.service.ElectionPositionService;
