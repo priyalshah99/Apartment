@@ -78,6 +78,6 @@ public class MaintenanceServiceImpl implements MaintenanceService {
 	@Override
 	public List<Maintenance> getAllByFlats(int id) {
 		Flats f=flatsRepo.getOne(id);
-		return maintenanceRepo.findByFlats(f);
+		return maintenanceRepo.findByFlat(f);
 	}
 }

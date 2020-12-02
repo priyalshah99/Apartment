@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.apartment.models.Owner;
 import com.apartment.repo.OwnerRepo;
+import com.apartment.request.LoginRequest;
 import com.apartment.request.OwnerRequest;
 import com.apartment.service.OwnerService;
 import com.apartment.utils.Constants;
@@ -88,9 +89,9 @@ public class OwnerServiceImpl implements OwnerService{
 	}
 
 	@Override
-	public Owner checkByEmailAndPassword(String email, String passwd) {
-		Owner owner=ownerRepo.findFirstByEmail(email);
-		if(owner!=null && passwd.equals(owner.getPassword()))
+	public Owner checkByEmailAndPassword(LoginRequest loginRequest) {
+		Owner owner=ownerRepo.findFirstByEmail(loginRequest.getEmail());
+		if(owner!=null && loginRequest.getPassword().equals(owner.getPassword()))
 			return owner;
 		else 
 			return null;

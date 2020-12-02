@@ -3,6 +3,7 @@ package com.apartment.service;
 import java.util.List;
 
 import com.apartment.models.Owner;
+import com.apartment.request.LoginRequest;
 import com.apartment.request.OwnerRequest;
 
 public interface OwnerService {
@@ -25,6 +26,6 @@ public interface OwnerService {
 	
 	Owner findByEmail(final String email);
 	
-	Owner checkByEmailAndPassword(final String email,final String password);
+	Owner checkByEmailAndPassword(final LoginRequest loginRequest);
 
 }
