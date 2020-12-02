@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.apartment.models.Flats;
 import com.apartment.models.Maintenance;
+import com.apartment.models.Owner;
 
 @Repository
 public interface MaintenanceRepo extends JpaRepository <Maintenance,Long> {

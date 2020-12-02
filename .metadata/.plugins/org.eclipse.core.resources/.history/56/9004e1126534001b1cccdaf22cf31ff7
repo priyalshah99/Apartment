@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.apartment.request.MaintenanceRequest;
+import com.apartment.response.FlatResponse;
 import com.apartment.response.MaintenanceResponse;
 import com.apartment.response.NonpaidMaintainenaceResponse;
 import com.apartment.service.MaintenanceService;
@@ -67,11 +68,11 @@ public class MaintenanceController {
 	}
 	
 	@GetMapping("/fetchbyflat/{id}")
-	public List<MaintenanceResponse> fetchByFlat(@PathVariable final int id) {
+	public List<MaintenanceResponse> fetchByFlat(@PathVariable final Long id) {
 	
-		return maintenanceService.getAllByFlats(id)
+		return maintainenaceService.getAllByOwner(id)
 				.stream()
-				.map(inc -> MaintenanceResponse.build(inc))
+				.map(inc -> FlatResponse.build(inc))
 				.collect(Collectors.toList());
 	
 	}

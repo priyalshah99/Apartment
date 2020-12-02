@@ -74,10 +74,4 @@ public class MaintenanceServiceImpl implements MaintenanceService {
 		int month = LocalDate.now().getMonth().getValue();
 		return maintenanceRepo.findFlatsWithNoMaintenancePaid(month);
 	}
-	
-	@Override
-	public List<Maintenance> getAllByFlats(int id) {
-		Flats f=flatsRepo.getOne(id);
-		return maintenanceRepo.findByFlats(f);
-	}
 }

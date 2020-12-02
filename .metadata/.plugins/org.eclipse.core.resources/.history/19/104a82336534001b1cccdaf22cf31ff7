@@ -14,6 +14,4 @@ public interface MaintenanceRepo extends JpaRepository <Maintenance,Long> {
 
 	@Query("select flat from Flats flat where flat.occupied = true and flat.flatId not in (select mnt.flat.flatId from Maintenance mnt where mnt.month = ?1)")
 	List<Flats> findFlatsWithNoMaintenancePaid(final int month);
-	
-	List<Maintenance> findByFlats(Flats f);
 }

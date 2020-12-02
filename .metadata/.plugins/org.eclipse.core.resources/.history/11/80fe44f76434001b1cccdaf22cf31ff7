@@ -65,14 +65,4 @@ public class MaintenanceController {
 				.map(flat -> NonpaidMaintainenaceResponse.build(flat))
 				.collect(Collectors.toList());
 	}
-	
-	@GetMapping("/fetchbyflat/{id}")
-	public List<MaintenanceResponse> fetchByFlat(@PathVariable final int id) {
-	
-		return maintenanceService.getAllByFlats(id)
-				.stream()
-				.map(inc -> MaintenanceResponse.build(inc))
-				.collect(Collectors.toList());
-	
-	}
 }

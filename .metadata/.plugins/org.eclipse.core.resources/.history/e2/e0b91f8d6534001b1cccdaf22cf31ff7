@@ -20,5 +20,5 @@ public interface MaintenanceService {
 	
 	List<Flats> fetchFlatsWithMaintenanceNotPaid();
 
-	List<Maintenance> getAllByFlats(int id);
+	List<Maintenance> getAllByFlats(Long id);
 }
