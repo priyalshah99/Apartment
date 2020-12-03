@@ -15,7 +15,6 @@ public class ElectionResultResponse {
 	private Long electionResultId;
 	private Long ownerId;
 	private String ownerName;
-	private String email;
 	
 	private Long positionId;
 	private String positionName;
@@ -32,7 +31,6 @@ public class ElectionResultResponse {
 		response.setElectionResultId(electionResult.getElectionResultId());
 		response.setOwnerId(electionResult.getOwner().getOwnerId());
 		response.setOwnerName(electionResult.getOwner().getName());
-		response.setEmail(electionResult.getOwner().getEmail());
 		
 		response.setPositionId(electionResult.getElectionPosition().getPositionId());
 		response.setPositionName(electionResult.getElectionPosition().getPositionName());
