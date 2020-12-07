@@ -1,0 +1,16 @@
+package com.apartment.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.apartment.request.ElectionVoteRecordRequest;
+
+@RestController
+public class ElectionVoteRecordController {
+
+	@PostMapping("/vote")
+	public String vote(@RequestBody final ElectionVoteRecordRequest request) {
+		
+	}
+}

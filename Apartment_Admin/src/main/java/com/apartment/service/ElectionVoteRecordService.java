@@ -1,0 +1,9 @@
+package com.apartment.service;
+
+import com.apartment.models.ElectionVoteRecord;
+
+public interface ElectionVoteRecordService {
+	void save(Long electionResultId, Long ownerId);
+
+	ElectionVoteRecord get(Long electionResultId, Long ownerId);
+}

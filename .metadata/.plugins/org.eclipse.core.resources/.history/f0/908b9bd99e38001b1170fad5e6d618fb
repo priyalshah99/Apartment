@@ -1,0 +1,13 @@
+package com.apartment.service.impl;
+
+import com.apartment.service.ElectionVoteRecordService;
+
+public class ElectionVoteRecordServiceImpl implements ElectionVoteRecordService {
+
+	@Override
+	public void save(Long electionResultId, Long ownerId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

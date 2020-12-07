@@ -1,11 +1,14 @@
 package com.apartment.models;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -25,11 +28,7 @@ public class Owner {
 	private boolean active;
 	private String password;
 	
+	@ManyToMany(mappedBy = "owners")
+    private Set<ElectionResult> electionResult = new HashSet<>();
 	
-	/*
-	 * @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy =
-	 * "owner") private Positions positions;
-	 * 
-	 * @ManyToMany(mappedBy = "owner") Set<Election> election;
-	 */
 }
