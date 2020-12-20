@@ -1,7 +1,5 @@
 package com.apartment.service.impl;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,9 +31,9 @@ public class ElectionVoteRecordServiceImpl implements ElectionVoteRecordService 
 	}
 	
 	@Override
-	public List<ElectionVoteRecord> get(Long ownerId)
+	public ElectionVoteRecord get(Long electionResultId, Long ownerId)
 	{
-		return electionVoteRecordRepo.findByMember(ownerRepo.getOne(ownerId));
+		return electionVoteRecordRepo.findFirstByMemberAndElection(ownerRepo.getOne(ownerId), electionResultRepo.getOne(electionResultId));
 	}
 
 }

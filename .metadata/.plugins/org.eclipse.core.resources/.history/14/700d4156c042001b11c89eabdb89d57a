@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import com.apartment.models.ElectionResult;
 import com.apartment.models.ElectionVoteRecord;
 import com.apartment.models.Owner;
 
