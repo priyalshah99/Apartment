@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.apartment.repo.MaintenanceRepo"/>
-<fullyQualifiedTypeName name="com.apartment.service.OwnerService"/>
-<fullyQualifiedTypeName name="com.apartment.service.PositionsService"/>
-<fullyQualifiedTypeName name="com.apartment.repo.PositionsRepo"/>
 <fullyQualifiedTypeName name="com.apartment.repo.SalaryRepo"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
 <fullyQualifiedTypeName name="com.apartment.request.FlatsRequest"/>
 <fullyQualifiedTypeName name="com.apartment.request.OwnerRequest"/>
@@ -30,13 +25,11 @@
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
 <fullyQualifiedTypeName name="com.apartment.service.ElectionPositionService"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
-<fullyQualifiedTypeName name="com.apartment.repo.ElectionResultRepo"/>
 <fullyQualifiedTypeName name="com.apartment.service.ElectionService"/>
 <fullyQualifiedTypeName name="com.apartment.models.ElectionPosition"/>
 <fullyQualifiedTypeName name="com.apartment.request.ElectionPositionRequest"/>
 <fullyQualifiedTypeName name="com.apartment.response.ElectionPositionResponse"/>
 <fullyQualifiedTypeName name="com.apartment.response.FlatResponse"/>
-<fullyQualifiedTypeName name="com.apartment.models.ElectionResult"/>
 <fullyQualifiedTypeName name="com.apartment.service.ElectionResultService"/>
 <fullyQualifiedTypeName name="com.apartment.repo.ElectionPositionRepo"/>
 <fullyQualifiedTypeName name="com.apartment.repo.OwnerRepo"/>
@@ -51,7 +44,6 @@
 <fullyQualifiedTypeName name="java.time.LocalDate"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.apartment.models.Election"/>
-<fullyQualifiedTypeName name="com.apartment.models.Owner"/>
 <fullyQualifiedTypeName name="com.apartment.request.LoginRequest"/>
 <fullyQualifiedTypeName name="lombok.Getter"/>
 <fullyQualifiedTypeName name="lombok.Setter"/>
@@ -60,4 +52,12 @@
 <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+<fullyQualifiedTypeName name="com.apartment.models.ElectionVoteRecord"/>
+<fullyQualifiedTypeName name="com.apartment.models.ElectionResult"/>
+<fullyQualifiedTypeName name="com.apartment.repo.ElectionResultRepo"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="com.apartment.models.Owner"/>
 </qualifiedTypeNameHistroy>

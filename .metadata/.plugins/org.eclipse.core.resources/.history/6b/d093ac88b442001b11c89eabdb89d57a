@@ -16,7 +16,7 @@ import com.apartment.service.ElectionVoteRecordService;
 
 @RestController
 @RequestMapping("/electionVoteRecord")
-//@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="http://localhost:4200")
 public class ElectionVoteRecordController {
 	
 	@Autowired
