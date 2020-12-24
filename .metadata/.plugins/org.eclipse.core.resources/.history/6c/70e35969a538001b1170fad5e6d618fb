@@ -1,7 +1,0 @@
-package com.apartment.service;
-
-public interface ElectionVoteRecordService {
-	void save(Long electionResultId, Long ownerId);
-
-	void getByElectionResultId(Long electionResultId, Long ownerId);
-}

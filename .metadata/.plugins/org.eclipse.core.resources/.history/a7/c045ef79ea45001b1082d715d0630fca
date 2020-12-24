@@ -1,0 +1,5 @@
+package com.apartment.notification;
+
+public class NominationTextBuilder {
+
+}

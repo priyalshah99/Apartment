@@ -1,0 +1,6 @@
+package com.apartment.service;
+
+public interface ForgotPasswordService {
+	void sendRecoveryEmail(final long ownerId);
+
+}

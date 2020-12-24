@@ -1,0 +1,21 @@
+package com.apartment.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.apartment.models.Owner;
+import com.apartment.repo.OwnerRepo;
+import com.apartment.service.ForgotPasswordService;
+
+@Service
+public class ForgotPasswordServiceImpl implements ForgotPasswordService{
+	
+	@Autowired
+	private OwnerRepo ownerRepo;
+	
+	private void sendRecoveryEmail(final long ownerId) {
+		Owner owner = ownerRepo.getOne(ownerId);
+		String tempPassword = RandomNumber.
+	}
+
+}

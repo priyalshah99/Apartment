@@ -1,0 +1,16 @@
+package com.apartment.notification;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class EmailSenderService {
+	
+	@Autowired
+    private JavaMailSender emailSender;
+
+
+	public void send(final Email email) {
+		
+	}
+}

@@ -1,0 +1,23 @@
+package com.apartment.notification;
+
+public final class PasswordRecoveryTextBuilder {
+	public static final String buildBody(String name, String password) {
+		StringBuffer stb = new StringBuffer("");
+		stb.append("<body>");
+		stb.append("Hello ").append(name).append(",");
+		stb.append("<br>");
+		stb.append("We have recieved request to recover password for Cityviews. "
+				+ "We are providing you a temporary password. "
+				+ "Please login your account with the given tempoarary password on Cityviews website and you can reset it post that");
+		stb.append("<br>");
+		stb.append("Temporary password: <b>").append(password).append("</b>");
+		stb.append("<br>");
+		stb.append("Please contact Cityviews administrator in case of any queries or concerns");
+		stb.append("<br>");
+		stb.append("Regards,");
+		stb.append("<br>");
+		stb.append("Cityviews Support Team");
+		stb.append("</body>");
+		return stb.toString();
+	}
+}

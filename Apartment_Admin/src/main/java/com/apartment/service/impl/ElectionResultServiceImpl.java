@@ -7,6 +7,9 @@ import org.springframework.stereotype.Service;
 
 import com.apartment.models.Election;
 import com.apartment.models.ElectionResult;
+import com.apartment.notification.Email;
+import com.apartment.notification.EmailSenderService;
+import com.apartment.notification.NominationTextBuilder;
 import com.apartment.repo.ElectionPositionRepo;
 import com.apartment.repo.ElectionRepo;
 import com.apartment.repo.ElectionResultRepo;
@@ -28,6 +31,9 @@ public class ElectionResultServiceImpl implements ElectionResultService{
 	
 	@Autowired
 	private OwnerRepo ownerRepo;
+	
+	@Autowired
+	private EmailSenderService emailSender;
 
 	@Override
 	public void saveElectionResult(ElectionResultRequest electionResultRequest) {
@@ -42,6 +48,17 @@ public class ElectionResultServiceImpl implements ElectionResultService{
 	//	electionResult.setWinner(electionResultRequest.isWinner());
 		
 		electionResultRepo.save(electionResult);
+		
+		Email email = new Email();
+		email.setBody(NominationTextBuilder.buildText(electionResult.getOwner().getName(),
+				electionResult.getElectionPosition().getPositionName(),
+				electionResult.getElection().getElectionName(),
+				electionResult.getElection().getDate()));
+		email.setSubject(NominationTextBuilder.getSubject());
+		email.setTo(electionResult.getOwner().getEmail());
+		
+		emailSender.send(email);
+		
 	}
 
 	@Override

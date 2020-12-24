@@ -1,0 +1,11 @@
+package com.apartment.utils;
+
+import java.util.Random;
+
+public final class RandomNumber {
+	public String getNext() {
+		Random rnd = new Random();
+		int n = 100000 + rnd.nextInt(900000);
+		return String.valueOf(n);
+	}
+}

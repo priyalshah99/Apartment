@@ -1,0 +1,6 @@
+package com.apartment.controller;
+
+@RestController
+public class ForgotPasswordController {
+
+}
