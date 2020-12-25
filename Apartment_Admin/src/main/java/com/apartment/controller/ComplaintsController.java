@@ -42,7 +42,7 @@ public class ComplaintsController {
 	@PutMapping("/{id}/description")
 	public String updateDescription(@PathVariable final long id,@RequestBody final ComplaintsDescriptionRequest description) {
 		complaintsService.updateComplaintDescription(id, description.getDescription());
-		return "Complaint status updated successfully";
+		return "Complaint description updated successfully";
 	}
 	
 	@PutMapping("/{id}")
