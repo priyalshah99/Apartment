@@ -72,7 +72,7 @@ public class FundsServiceImpl implements FundsService {
 
 	@Override
 	public List<Funds> getByOwner(Long id) {
-		Owner owner=ownerRepo.getOne(id);
+		Owner owner=ownerRepo.findById(id);
 		return fundsRepo.findByOwner(owner);
 	}
 	

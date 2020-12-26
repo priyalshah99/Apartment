@@ -54,10 +54,10 @@
 <fullyQualifiedTypeName name="com.apartment.service.ForgotPasswordService"/>
 <fullyQualifiedTypeName name="com.apartment.repo.OwnerRepo"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-<fullyQualifiedTypeName name="com.apartment.models.Owner"/>
 <fullyQualifiedTypeName name="com.apartment.utils.RandomNumber"/>
 <fullyQualifiedTypeName name="com.apartment.notification.ForgotPasswordTextBuilder"/>
 <fullyQualifiedTypeName name="com.apartment.service.PasswordRecoveryService"/>
 <fullyQualifiedTypeName name="com.apartment.notification.PasswordRecoveryTextBuilder"/>
 <fullyQualifiedTypeName name="com.apartment.notification.NominationTextBuilder"/>
+<fullyQualifiedTypeName name="com.apartment.models.Owner"/>
 </qualifiedTypeNameHistroy>

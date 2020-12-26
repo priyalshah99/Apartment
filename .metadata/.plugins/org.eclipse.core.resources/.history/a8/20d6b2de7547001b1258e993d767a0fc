@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.apartment.models.Funds;
-import com.apartment.models.Owner;
 import com.apartment.repo.FundsRepo;
 import com.apartment.repo.OwnerRepo;
 import com.apartment.request.FundsRequest;
@@ -72,8 +71,7 @@ public class FundsServiceImpl implements FundsService {
 
 	@Override
 	public List<Funds> getByOwner(Long id) {
-		Owner owner=ownerRepo.getOne(id);
-		return fundsRepo.findByOwner(owner);
+		return fundsRepo.findByOwner(id);
 	}
 	
 	

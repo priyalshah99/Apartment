@@ -57,6 +57,16 @@ public class FundsController {
 				.map(inc -> FundsResponse.build(inc))
 				.collect(Collectors.toList());
 	}
+	
+	@GetMapping("/fetchByOwner/{id}")
+	public List<FundsResponse> fetchAllByOwner(@PathVariable final Long id) {
+		return fundsService.getByOwner(id)
+				.stream()
+				.map(inc -> FundsResponse.build(inc))
+				.collect(Collectors.toList());
+	}
+	
+	
 
 	
 	

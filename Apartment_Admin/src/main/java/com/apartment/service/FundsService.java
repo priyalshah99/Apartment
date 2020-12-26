@@ -16,4 +16,6 @@ public interface FundsService {
 	Funds getFunds(final Long id);
 	
 	void deleteFunds(final Long id);
+	
+	List<Funds> getByOwner(final Long id);
 }
